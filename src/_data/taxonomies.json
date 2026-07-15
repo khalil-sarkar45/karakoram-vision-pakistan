@@ -1,0 +1,45 @@
+{
+  "difficulty_levels": [
+    "Easy",
+    "Moderate",
+    "Challenging",
+    "Strenuous",
+    "Expedition"
+  ],
+  "departure_types": [
+    "Private",
+    "Fixed Departure",
+    "Group Departure",
+    "Custom"
+  ],
+  "service_types": [
+    "Tours",
+    "Trekking",
+    "Expeditions",
+    "Jeep Safaris",
+    "Licensed Hunting Services",
+    "Vehicles"
+  ],
+  "regions": [
+    "Pakistan",
+    "Gilgit-Baltistan",
+    "Skardu",
+    "Hunza",
+    "Karakoram",
+    "Himalaya",
+    "Hindu Kush"
+  ],
+  "currencies": [
+    "USD",
+    "PKR",
+    "EUR",
+    "GBP"
+  ],
+  "journey_statuses": [
+    "Available",
+    "Limited places",
+    "On request",
+    "Sold out",
+    "Draft"
+  ]
+}

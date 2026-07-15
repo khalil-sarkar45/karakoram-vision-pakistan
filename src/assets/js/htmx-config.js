@@ -1,0 +1,2 @@
+document.addEventListener('htmx:responseError',()=>{const el=document.querySelector('#catalog-results');if(el)el.insertAdjacentHTML('afterbegin','<p class="col-span-full rounded-lg border border-red-200 bg-red-50 p-4 text-red-800">Search is temporarily unavailable. The pre-rendered journeys remain accessible below.</p>')});
+document.addEventListener('htmx:afterSwap',()=>window.dispatchEvent(new CustomEvent('catalog-updated')));

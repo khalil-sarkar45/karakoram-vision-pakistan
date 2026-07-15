@@ -1,0 +1,22 @@
+{% set cardImage = item.data.cover_image | safeMedia(item.data.cover_source, '/assets/uploads/placeholder.svg') %}
+<article class="bk-journey-card">
+  <a class="bk-card-media" href="{{ item.url }}">
+    <img src="{{ cardImage }}" alt="{{ item.data.title }}" width="800" height="500" loading="lazy" decoding="async">
+    <span class="bk-card-type">{{ item.data.service_label or item.data.service_type or 'Journey' }}</span>
+    {% if item.data.featured %}<span class="bk-card-star" aria-label="Featured journey">★</span>{% endif %}
+  </a>
+  <div class="bk-card-body">
+    <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+    {% if item.data.destination %}<p class="bk-card-destination">{{ item.data.destination }}</p>{% endif %}
+    <p>{{ item.data.summary }}</p>
+    <div class="bk-card-meta">
+      {% if item.data.duration %}<span>{{ item.data.duration }}</span>{% endif %}
+      {% if item.data.price_from %}<span>{{ item.data.price_from }}</span>{% endif %}
+      {% if item.data.difficulty %}<span>{{ item.data.difficulty }}</span>{% endif %}
+    </div>
+  </div>
+  <div class="bk-card-actions">
+    <a href="{{ item.url }}">More details</a>
+    <a class="bk-book-button" href="/plan-a-trip/?journey={{ item.data.title | urlencode }}&service={{ item.data.service_type | urlencode }}#trip-request-form">Book now</a>
+  </div>
+</article>

@@ -1,0 +1,89 @@
+{
+  "plan_trip": {
+    "enabled": true,
+    "eyebrow": "Tell us what you need",
+    "heading": "Request a tailored proposal",
+    "description": "Share your dates, route, group size and preferred comfort. The Skardu team will respond with current availability and a written scope.",
+    "submit_label": "Send trip request",
+    "success_message": "Thank you. We will review your trip request and reply through your selected contact channel.",
+    "fallback_note": "Until a form endpoint is configured, your email application may open to send this request.",
+    "fields": {
+      "name": {
+        "enabled": true,
+        "required": true,
+        "label": "Full name"
+      },
+      "email": {
+        "enabled": true,
+        "required": true,
+        "label": "Email"
+      },
+      "phone": {
+        "enabled": true,
+        "required": false,
+        "label": "Phone / WhatsApp"
+      },
+      "service": {
+        "enabled": true,
+        "required": false,
+        "label": "Service"
+      },
+      "journey": {
+        "enabled": true,
+        "required": false,
+        "label": "Journey or package",
+        "placeholder": "Example: K2 Base Camp Trek"
+      },
+      "start_date": {
+        "enabled": true,
+        "required": false,
+        "label": "Start date"
+      },
+      "end_date": {
+        "enabled": true,
+        "required": false,
+        "label": "End date"
+      },
+      "travelers": {
+        "enabled": true,
+        "required": false,
+        "label": "Number of travelers"
+      },
+      "budget": {
+        "enabled": true,
+        "required": false,
+        "label": "Approximate budget",
+        "placeholder": "USD or PKR"
+      },
+      "destination": {
+        "enabled": true,
+        "required": false,
+        "label": "Destination or route"
+      },
+      "requirements": {
+        "enabled": true,
+        "required": true,
+        "label": "Requirements",
+        "placeholder": "Accommodation preference, fitness level, private/group travel, transport, dietary needs or any questions"
+      }
+    },
+    "service_options": [
+      "Tours",
+      "Trekking",
+      "Expeditions",
+      "Jeep Safaris",
+      "Vehicle Rental",
+      "Permit-led Field Logistics"
+    ]
+  },
+  "contact": {
+    "enabled": true,
+    "eyebrow": "Message",
+    "heading": "Contact form",
+    "submit_label": "Send inquiry",
+    "name_label": "Name",
+    "email_label": "Email",
+    "message_label": "Message",
+    "endpoint_help": "Add your Formspree endpoint in Pages CMS. Direct email and messaging options remain available."
+  }
+}

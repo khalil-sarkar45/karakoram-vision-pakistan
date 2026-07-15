@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+permalink: /plan-a-trip/
+title: Plan a Custom Trip
+summary: Tell Karakoram Vision Pakistan where you want to travel and our team will prepare a tailored proposal.
+seo:
+  title: Plan a Custom Pakistan & Karakoram Trip | Karakoram Vision Pakistan
+  description: Request a customized tour, trek, expedition, jeep safari or licensed hunting coordination proposal from Karakoram Vision Pakistan.
+---
+{% set form = formsConfig.plan_trip %}
+{% set heroItems = collections.journeys | limit(6) %}{% set heroHeading = 'Plan a Trip' %}{% set heroSummary = summary %}{% set heroEyebrow = 'Custom journey planner' %}{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+{% if form.enabled !== false %}
+<section id="trip-request-form" class="bk-trip-request-anchor mx-auto max-w-5xl px-4 py-12" data-trip-request-section tabindex="-1">
+  <div class="mb-8"><p class="eyebrow">{{ form.eyebrow }}</p><h2 class="mt-2 text-4xl font-black">{{ form.heading }}</h2><p class="mt-3 text-slate-600">{{ form.description }}</p></div>
+  <form data-trip-planner class="grid gap-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:grid-cols-2 md:p-9" action="{{ site.forms.contact_formspree or ('mailto:' + site.booking_email) }}" method="{% if site.forms.contact_formspree %}post{% else %}get{% endif %}" enctype="text/plain">
+    <input type="hidden" name="request_type" value="trip">
+    {% if form.fields.name.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.name.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" name="name"{% if form.fields.name.required %} required{% endif %} autocomplete="name"{% if form.fields.name.placeholder %} placeholder="{{ form.fields.name.placeholder }}"{% endif %}></label>{% endif %}
+    {% if form.fields.email.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.email.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" type="email" name="email"{% if form.fields.email.required %} required{% endif %} autocomplete="email"{% if form.fields.email.placeholder %} placeholder="{{ form.fields.email.placeholder }}"{% endif %}></label>{% endif %}
+    {% if form.fields.phone.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.phone.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" name="phone"{% if form.fields.phone.required %} required{% endif %} autocomplete="tel"{% if form.fields.phone.placeholder %} placeholder="{{ form.fields.phone.placeholder }}"{% endif %}></label>{% endif %}
+    {% if form.fields.service.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.service.label }}<select class="rounded-md border border-slate-300 px-4 py-3 font-normal" name="service"{% if form.fields.service.required %} required{% endif %}>{% for option in form.service_options %}<option value="{{ option }}">{{ option }}</option>{% endfor %}</select></label>{% endif %}
+    {% if form.fields.journey.enabled !== false %}<label class="grid gap-2 font-bold md:col-span-2">{{ form.fields.journey.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" name="journey"{% if form.fields.journey.required %} required{% endif %} placeholder="{{ form.fields.journey.placeholder }}"></label>{% endif %}
+    {% if form.fields.start_date.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.start_date.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" type="date" name="start_date"{% if form.fields.start_date.required %} required{% endif %}></label>{% endif %}
+    {% if form.fields.end_date.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.end_date.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" type="date" name="end_date"{% if form.fields.end_date.required %} required{% endif %}></label>{% endif %}
+    {% if form.fields.travelers.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.travelers.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" type="number" min="1" name="travelers"{% if form.fields.travelers.required %} required{% endif %}></label>{% endif %}
+    {% if form.fields.budget.enabled !== false %}<label class="grid gap-2 font-bold">{{ form.fields.budget.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" name="budget"{% if form.fields.budget.required %} required{% endif %} placeholder="{{ form.fields.budget.placeholder }}"></label>{% endif %}
+    {% if form.fields.destination.enabled !== false %}<label class="grid gap-2 font-bold md:col-span-2">{{ form.fields.destination.label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" name="destination"{% if form.fields.destination.required %} required{% endif %}></label>{% endif %}
+    {% if form.fields.requirements.enabled !== false %}<label class="grid gap-2 font-bold md:col-span-2">{{ form.fields.requirements.label }}<textarea class="min-h-40 rounded-md border border-slate-300 px-4 py-3 font-normal" name="requirements"{% if form.fields.requirements.required %} required{% endif %} placeholder="{{ form.fields.requirements.placeholder }}"></textarea></label>{% endif %}
+    <div class="md:col-span-2"><button class="btn-primary" type="submit">{{ form.submit_label }}</button>{% if form.fallback_note %}<p class="mt-3 text-sm text-slate-600">{{ form.fallback_note }}</p>{% endif %}</div>
+  </form>
+</section>
+{% endif %}
+<section class="bk-plan-direct-contact" aria-labelledby="plan-direct-contact-heading"><p class="eyebrow">Prefer instant messaging?</p><h2 id="plan-direct-contact-heading">Email, WhatsApp or another contact app</h2><p>Use the channel most familiar in your country.</p>{% include "components/contact-channel-buttons.njk" %}</section>

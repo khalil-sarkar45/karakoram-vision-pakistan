@@ -1,0 +1,11 @@
+{% from "components/icon.njk" import icon %}
+{% set directEmail = site.booking_email or site.email %}
+<div class="bk-contact-channel-actions" aria-label="Direct contact options">
+  <a class="bk-contact-channel bk-contact-channel-email" href="mailto:{{ directEmail }}?subject=Travel inquiry{% if title %}: {{ title | urlencode }}{% endif %}">{{ icon('mail') }}<span>Email</span></a>
+  {% if site.contact.whatsapp %}
+  <a class="bk-contact-channel bk-contact-channel-whatsapp" href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener" aria-label="Contact Karakoram Vision Pakistan on WhatsApp">{{ icon('whatsapp') }}<span>WhatsApp</span></a>
+  {% else %}
+  <button class="bk-contact-channel bk-contact-channel-whatsapp" type="button" data-open-contact aria-label="Open contact options">{{ icon('whatsapp') }}<span>WhatsApp</span></button>
+  {% endif %}
+  <button class="bk-contact-channel bk-contact-channel-other" type="button" data-open-contact>{{ icon('chat') }}<span>Choose other contact</span></button>
+</div>

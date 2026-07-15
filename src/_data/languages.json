@@ -1,0 +1,23 @@
+[
+  {"code":"en","label":"English","flag":"🇬🇧"},
+  {"code":"ur","label":"Urdu","flag":"🇵🇰"},
+  {"code":"ar","label":"Arabic","flag":"🇸🇦"},
+  {"code":"zh-CN","label":"Chinese","flag":"🇨🇳"},
+  {"code":"ja","label":"Japanese","flag":"🇯🇵"},
+  {"code":"ko","label":"Korean","flag":"🇰🇷"},
+  {"code":"ru","label":"Russian","flag":"🇷🇺"},
+  {"code":"tr","label":"Turkish","flag":"🇹🇷"},
+  {"code":"fa","label":"Persian","flag":"🇮🇷"},
+  {"code":"fr","label":"French","flag":"🇫🇷"},
+  {"code":"de","label":"German","flag":"🇩🇪"},
+  {"code":"es","label":"Spanish","flag":"🇪🇸"},
+  {"code":"it","label":"Italian","flag":"🇮🇹"},
+  {"code":"pt","label":"Portuguese","flag":"🇵🇹"},
+  {"code":"nl","label":"Dutch","flag":"🇳🇱"},
+  {"code":"pl","label":"Polish","flag":"🇵🇱"},
+  {"code":"id","label":"Indonesian","flag":"🇮🇩"},
+  {"code":"ms","label":"Malay","flag":"🇲🇾"},
+  {"code":"th","label":"Thai","flag":"🇹🇭"},
+  {"code":"vi","label":"Vietnamese","flag":"🇻🇳"},
+  {"code":"hi","label":"Hindi","flag":"🇮🇳"}
+]

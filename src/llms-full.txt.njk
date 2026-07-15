@@ -1,0 +1,8 @@
+---
+permalink: /llms-full.txt
+eleventyExcludeFromCollections: true
+---
+# {{ site.name }} public, indexable content
+
+{% for item in collections.indexable %}- [{{ item.data.title or item.url }}]({{ site.url }}{{ item.url }}){% if item.data.summary %}: {{ item.data.summary | stripHtml }}{% endif %}
+{% endfor %}

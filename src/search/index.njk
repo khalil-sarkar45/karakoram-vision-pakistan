@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+permalink: /search/
+title: Search Karakoram Vision Pakistan
+summary: Search tours, trekking routes, expeditions, jeep safaris, travel guides and vehicles.
+seo:
+  title: Search Karakoram Vision Pakistan
+  description: Search Karakoram Vision Pakistan travel experiences, guides and services.
+  robots: noindex, follow
+---
+<section class="bg-slate-950 py-16 text-white">
+  <div class="mx-auto max-w-7xl px-4">
+    <p class="eyebrow text-blue-200">Site search</p>
+    <h1 class="mt-3 text-4xl font-black md:text-6xl">Search Karakoram Vision Pakistan</h1>
+    <p class="mt-4 max-w-3xl text-slate-200">Find tours, trekking, expeditions, guides and services.</p>
+  </div>
+</section>
+<section class="mx-auto max-w-7xl px-4 py-12" data-catalog-search-page>
+  <form action="/search/" method="get" autocomplete="off" data-global-search-main class="grid gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 md:grid-cols-[180px_1fr_auto]" data-catalog-search-form hx-boost="false">
+    <select name="type" class="rounded-md border border-slate-300 bg-white px-4 py-3" aria-label="Content type">
+      <option value="all">All content</option><option value="tours">Tours</option><option value="trekking">Trekking</option><option value="expeditions">Expeditions</option><option value="jeep-safaris">Jeep Safaris</option><option value="hunting-services">Hunting Services</option><option value="blog">Travel Guides</option><option value="vehicles">Vehicles</option><option value="pages">Destinations & Pages</option>
+    </select>
+    <input class="rounded-md border border-slate-300 bg-white px-4 py-3" type="search" name="q" autocomplete="off" placeholder="Search by destination, activity or route" aria-label="Search query">
+    <input type="hidden" name="filter" value="">
+    <button class="btn-primary" type="submit">Search</button>
+  </form>
+  <div class="mt-4 flex min-h-10 flex-wrap gap-2" id="active-search-filters" aria-label="Active search filters"></div>
+  <div class="mt-3 flex flex-wrap items-center justify-between gap-3">
+    <p id="search-context" class="text-sm font-bold text-slate-700" aria-live="polite">Choose a category or enter a search term.</p>
+    <a class="text-sm font-bold text-blue-800 hover:text-orange-600" href="/journey-categories/">Browse all journey categories →</a>
+  </div>
+  <div id="search-results" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite" aria-busy="false">
+    <p class="col-span-full rounded-xl bg-slate-50 p-8 text-slate-600">Choose a category or enter a search term above.</p>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /expeditions/
+title: Expeditions
+summary: Technical and non-technical mountaineering expeditions with logistics and local coordination.
+service_type: expeditions
+seo:
+  title: Pakistan Mountaineering Expeditions | Karakoram Vision Pakistan
+  description: Plan mountaineering expeditions in Pakistan with local logistics, base-camp support and permit coordination.
+---
+{% set items = collections | serviceCollection(service_type) %}
+{% include "components/catalog-landing.njk" %}

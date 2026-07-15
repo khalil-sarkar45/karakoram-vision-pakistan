@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+permalink: /travel-resources/
+title: Travel Resources
+seo:
+  title: Pakistan & Karakoram Travel Resources | Karakoram Vision Pakistan
+  description: Practical preparation resources for trekking, expeditions and tours in Pakistan, the Karakoram, Himalaya, Hindu Kush and Central Asia.
+---
+<section class="bk-page-hero-simple"><div><p class="eyebrow">Prepare with confidence</p><h1>Travel Resources</h1><p>Use these guides as a starting point for fitness, gear, insurance, health, visas, altitude and responsible mountain travel. Final requirements vary by route and season.</p></div></section>
+<section class="bk-resources-shell"><div class="bk-resource-grid">
+  {% set resources = [
+    ['Trip preparedness','Fitness, training and realistic expectations for active journeys.','/search/?type=blog&q=preparation'],
+    ['Gear & packing','Layering, footwear, sleeping systems and technical equipment.','/search/?type=blog&q=packing'],
+    ['Travel insurance','Coverage considerations for trekking, altitude and evacuation.','/search/?type=blog&q=insurance'],
+    ['Health & altitude','Acclimatization, hydration, medication discussions and warning signs.','/search/?type=blog&q=altitude'],
+    ['Pakistan travel information','Transport, culture, money, connectivity and arrival guidance.','/international-travelers/'],
+    ['Permits & compliance','Route permits, restricted areas, climbing and wildlife programme rules.','/contact-us/'],
+    ['Responsible travel','Local communities, conservation, waste and respectful conduct.','/social-responsibility/'],
+    ['Frequently asked questions','Fast answers about bookings, groups, safety and customization.','/faqs/'],
+    ['Vehicles & logistics','Road transfers, expedition cargo and mountain-access transport.','/vehicles/']
+  ] %}
+  {% for resource in resources %}<article class="bk-resource-card"><span>Resource {{ loop.index }}</span><h2>{{ resource[0] }}</h2><p>{{ resource[1] }}</p><a href="{{ resource[2] }}">Open resource →</a></article>{% endfor %}
+</div><section class="bk-home-contact"><div><p class="eyebrow">Need a specific answer?</p><h2>Talk directly with the travel team</h2><p>Choose email, phone, WhatsApp, Telegram, Messenger, LINE, WeChat, Viber, KakaoTalk, VK or another configured channel.</p></div><button type="button" class="btn-primary" data-open-contact>Choose contact app</button></section></section>

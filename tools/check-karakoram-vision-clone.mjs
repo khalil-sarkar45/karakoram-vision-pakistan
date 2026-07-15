@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=process.cwd();
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const json=p=>JSON.parse(read(p));
+const site=json('src/_data/site.json');
+const folders=['tours','trekking','expeditions','jeep-safaris','hunting-services','blog','vehicles','pages'];
+const counts=Object.fromEntries(folders.map(f=>[f,fs.readdirSync(path.join(root,'src/content',f)).filter(x=>x.endsWith('.md')).length]));
+const content=folders.flatMap(f=>fs.readdirSync(path.join(root,'src/content',f)).filter(x=>x.endsWith('.md')).map(x=>read(`src/content/${f}/${x}`))).join('\n');
+const built=[...walk(path.join(root,'_site'))].filter(p=>p.endsWith('.html')).map(p=>fs.readFileSync(p,'utf8')).join('\n');
+function* walk(dir){for(const ent of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,ent.name);if(ent.isDirectory())yield* walk(p);else yield p;}}
+const issues=[];
+if(site.name!=='Karakoram Vision Pakistan')issues.push('site name');
+if(site.url!=='https://www.karakoramvision.com')issues.push('site URL');
+if(site.contact?.whatsapp!=='923465450637')issues.push('WhatsApp');
+if(!read('.pages.yml').includes('phone_secondary'))issues.push('secondary phone CMS field');
+if(fs.existsSync(path.join(root,'.git')))issues.push('clone unexpectedly contains .git');
+if(/apricottours\.pk|imported_from:\s*Apricot/i.test(content))issues.push('legacy imported content found');
+if(/beyondkarakoram\.com/i.test(built))issues.push('old canonical/domain found in build');
+if(!built.includes('Karakoram Vision Pakistan'))issues.push('brand missing from build');
+if(!fs.existsSync(path.join(root,'_site','sitemap.xml')))issues.push('sitemap missing');
+if(!fs.existsSync(path.join(root,'_site','robots.txt')))issues.push('robots missing');
+if(counts.tours<6||counts.trekking<6||counts.expeditions<4||counts.blog<4)issues.push('starter content incomplete');
+const report={site:site.name,url:site.url,counts,html_pages:[...walk(path.join(root,'_site'))].filter(p=>p.endsWith('.html')).length,issues_count:issues.length,issues};
+fs.writeFileSync(path.join(root,'KARAKORAM_VISION_CLONE_AUDIT.json'),JSON.stringify(report,null,2));
+console.log(JSON.stringify(report,null,2));
+if(issues.length)process.exit(1);
+console.log('KARAKORAM_VISION_INDEPENDENT_CLONE_PASSED');

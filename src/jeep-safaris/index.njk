@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /jeep-safaris/
+title: Jeep Safaris
+summary: Mountain road journeys, remote valley access and private 4x4 safari programmes.
+service_type: jeep-safaris
+seo:
+  title: Pakistan Jeep Safaris & 4x4 Mountain Tours | Karakoram Vision Pakistan
+  description: Explore private jeep safaris and remote mountain road journeys across Pakistan and Gilgit-Baltistan.
+---
+{% set items = collections | serviceCollection(service_type) %}
+{% include "components/catalog-landing.njk" %}

@@ -1,0 +1,14 @@
+{
+  "required_files_missing": [],
+  "indexable_pages_checked": 65,
+  "schema_errors": 0,
+  "policy_checks": {
+    "oai_search_allowed": true,
+    "gptbot_policy": true,
+    "sitemap_declared": true,
+    "content_api_bundled": true,
+    "server_middleware": true
+  },
+  "issues_count": 0,
+  "issues_sample": []
+}

@@ -1,0 +1,16 @@
+{% from "components/icon.njk" import icon %}
+<aside class="bk-floating-contact-stack" aria-label="Quick international contact options">
+  {% if site.contact.whatsapp %}
+  <a class="bk-floating-contact-button bk-floating-whatsapp" href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener" aria-label="Contact Karakoram Vision Pakistan on WhatsApp">
+    {{ icon('whatsapp') }}<span>WhatsApp</span>
+  </a>
+  {% endif %}
+  {% if site.contact.wechat_id %}
+  <button class="bk-floating-contact-button bk-floating-wechat" type="button" data-copy-text="{{ site.contact.wechat_id }}" aria-label="Copy Karakoram Vision Pakistan WeChat ID">
+    {{ icon('wechat') }}<span>WeChat</span>
+  </button>
+  {% endif %}
+  <button class="bk-floating-contact-button bk-floating-other" type="button" data-open-contact aria-haspopup="dialog" aria-controls="contact-modal">
+    {{ icon('chat') }}<span><strong>Let's Talk</strong><small>Other contacts</small></span>
+  </button>
+</aside>

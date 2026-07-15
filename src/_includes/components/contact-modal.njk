@@ -1,0 +1,52 @@
+{% from "components/icon.njk" import icon %}
+<div id="contact-modal" data-contact-modal hidden aria-hidden="true" class="bk-contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+  <div data-contact-panel class="bk-contact-modal-panel">
+    <button data-close-contact type="button" class="bk-contact-modal-close" aria-label="Close contact options">×</button>
+    <p class="eyebrow">International contact hub</p>
+    <h2 id="contact-modal-title">Contact {{ site.name }}</h2>
+    <p class="bk-contact-modal-intro">Use the app most familiar in your country. Only channels configured in Pages CMS appear publicly.</p>
+
+    <section class="bk-contact-group" aria-labelledby="contact-global">
+      <h3 id="contact-global">Global channels</h3>
+      <div class="bk-contact-app-grid">
+        <a class="bk-contact-app-card" href="mailto:{{ site.email }}">{{ icon('mail') }}<span><strong>Email</strong><small>{{ site.email }}</small></span></a>
+        {% if site.phone %}<a class="bk-contact-app-card" href="tel:{{ site.phone }}">{{ icon('phone') }}<span><strong>Phone</strong><small>{{ site.phone }}</small></span></a>{% endif %}{% if site.phone_secondary %}<a class="bk-contact-app-card" href="tel:{{ site.phone_secondary }}">{{ icon('phone') }}<span><strong>Alternate phone</strong><small>{{ site.phone_secondary }}</small></span></a>{% endif %}
+        {% if site.contact.whatsapp %}<a class="bk-contact-app-card" href="https://wa.me/{{ site.contact.whatsapp }}" target="_blank" rel="noopener">{{ icon('whatsapp') }}<span><strong>WhatsApp</strong><small>Worldwide</small></span></a>{% endif %}
+        {% if site.contact.telegram %}<a class="bk-contact-app-card" href="{{ site.contact.telegram }}" target="_blank" rel="noopener">{{ icon('telegram') }}<span><strong>Telegram</strong><small>Europe & worldwide</small></span></a>{% endif %}
+        {% if site.contact.messenger %}<a class="bk-contact-app-card" href="{{ site.contact.messenger }}" target="_blank" rel="noopener">{{ icon('messenger') }}<span><strong>Messenger</strong><small>Worldwide</small></span></a>{% endif %}
+        {% if site.contact.signal %}<a class="bk-contact-app-card" href="{{ site.contact.signal }}" target="_blank" rel="noopener">{{ icon('signal') }}<span><strong>Signal</strong><small>Private messaging</small></span></a>{% endif %}
+        {% if site.contact.skype %}<a class="bk-contact-app-card" href="{{ site.contact.skype }}" target="_blank" rel="noopener">{{ icon('skype') }}<span><strong>Skype</strong><small>Calls & messaging</small></span></a>{% endif %}
+      </div>
+    </section>
+
+    {% if site.contact.line or site.contact.wechat_id or site.contact.viber or site.contact.kakaotalk or site.contact.zalo or site.contact.imo %}
+    <section class="bk-contact-group" aria-labelledby="contact-asia">
+      <h3 id="contact-asia">Asia & regional channels</h3>
+      <div class="bk-contact-app-grid">
+        {% if site.contact.line %}<a class="bk-contact-app-card" href="{{ site.contact.line }}" target="_blank" rel="noopener">{{ icon('line') }}<span><strong>LINE</strong><small>Japan, Thailand, Taiwan</small></span></a>{% endif %}
+        {% if site.contact.wechat_id %}<button class="bk-contact-app-card" type="button" data-copy-text="{{ site.contact.wechat_id }}">{{ icon('wechat') }}<span><strong>WeChat</strong><small>ID: {{ site.contact.wechat_id }}</small></span></button>{% endif %}
+        {% if site.contact.viber %}<a class="bk-contact-app-card" href="{{ site.contact.viber }}" target="_blank" rel="noopener">{{ icon('viber') }}<span><strong>Viber</strong><small>Europe & Asia</small></span></a>{% endif %}
+        {% if site.contact.kakaotalk %}<a class="bk-contact-app-card" href="{{ site.contact.kakaotalk }}" target="_blank" rel="noopener">{{ icon('kakao') }}<span><strong>KakaoTalk</strong><small>South Korea</small></span></a>{% endif %}
+        {% if site.contact.zalo %}<a class="bk-contact-app-card" href="{{ site.contact.zalo }}" target="_blank" rel="noopener">{{ icon('zalo') }}<span><strong>Zalo</strong><small>Vietnam</small></span></a>{% endif %}
+        {% if site.contact.imo %}<a class="bk-contact-app-card" href="{{ site.contact.imo }}" target="_blank" rel="noopener">{{ icon('imo') }}<span><strong>imo</strong><small>South Asia & Middle East</small></span></a>{% endif %}
+      </div>
+      {% if site.contact.wechat_qr %}<div class="bk-wechat-qr"><img src="{{ site.contact.wechat_qr | safeMedia('', '/assets/uploads/placeholder.svg') }}" alt="{{ site.name }} WeChat QR code" width="176" height="176" loading="lazy" decoding="async"><span>Scan to connect on WeChat</span></div>{% endif %}
+    </section>
+    {% endif %}
+
+    {% if site.contact.vk or site.contact.max_russia %}
+    <section class="bk-contact-group" aria-labelledby="contact-eurasia">
+      <h3 id="contact-eurasia">Eurasia</h3>
+      <div class="bk-contact-app-grid">
+        {% if site.contact.vk %}<a class="bk-contact-app-card" href="{{ site.contact.vk }}" target="_blank" rel="noopener">{{ icon('vk') }}<span><strong>VK</strong><small>Eastern Europe & Central Asia</small></span></a>{% endif %}
+        {% if site.contact.max_russia %}<a class="bk-contact-app-card" href="{{ site.contact.max_russia }}" target="_blank" rel="noopener">{{ icon('max') }}<span><strong>MAX</strong><small>Russia</small></span></a>{% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <div class="bk-contact-modal-actions">
+      <a class="btn-primary" href="/plan-a-trip/#trip-request-form">Open complete trip planner</a>
+      <a class="bk-contact-secondary" href="/contact-us/">Contact page</a>
+    </div>
+  </div>
+</div>

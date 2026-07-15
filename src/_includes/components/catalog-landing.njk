@@ -1,0 +1,22 @@
+{% set heroItems = items | limit(6) %}
+{% set heroHeading = title %}
+{% set heroSummary = summary %}
+{% set heroEyebrow = 'Karakoram Vision Pakistan ' ~ (title | lower) %}
+{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="bk-catalog-shell" x-data="catalogFilters">
+  <header class="bk-section-heading">
+    <div><p class="eyebrow">Explore the collection</p><h2>{{ title }} experiences</h2><p>{{ summary }}</p></div>
+    <span class="bk-count-pill">{{ items.length }} published</span>
+  </header>
+  <form action="/search/" method="get" class="bk-catalog-filter" hx-get="/api/catalog" hx-target="#catalog-results" hx-trigger="submit, input changed delay:350ms from:input[name='q']" hx-push-url="false">
+    <input type="hidden" name="type" value="{{ service_type }}">
+    <label><span>Search {{ title | lower }}</span><input type="search" name="q" placeholder="Destination, activity, peak or route" aria-label="Search {{ title }}"></label>
+    <button type="submit">Search</button>
+  </form>
+  <div id="catalog-results" class="bk-card-grid" aria-live="polite">
+    {% for item in items | limit(24) %}{% include "components/journey-card.njk" %}{% endfor %}
+  </div>
+  {% if items.length > 24 %}<div class="bk-load-more" hx-get="/api/catalog?type={{ service_type }}&page=2" hx-trigger="revealed" hx-swap="outerHTML"><span>Loading more {{ title | lower }}…</span></div>{% endif %}
+</section>
+<section class="bk-landing-cta"><div><p class="eyebrow">Need a tailored itinerary?</p><h2>Build this journey around your dates and group</h2><p>Share your route, preferred comfort level, budget and travel window.</p></div><a href="/plan-a-trip/?service={{ title | urlencode }}#trip-request-form">Plan a custom trip</a></section>

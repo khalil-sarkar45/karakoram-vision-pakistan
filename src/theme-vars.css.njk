@@ -1,0 +1,60 @@
+---
+permalink: /assets/css/theme-vars.css
+eleventyExcludeFromCollections: true
+---
+:root {
+  --bk-primary: {{ theme.primary or '#0F172A' }};
+  --bk-primary-soft: {{ theme.primary_soft or '#1E293B' }};
+  --bk-accent: {{ theme.accent or '#FF5A1F' }};
+  --bk-accent-hover: {{ theme.accent_hover or '#FF713F' }};
+  --bk-surface: {{ theme.surface or '#FFFFFF' }};
+  --bk-surface-muted: {{ theme.surface_muted or '#F8FAFC' }};
+  --bk-text: {{ theme.text or '#0F172A' }};
+  --bk-text-muted: {{ theme.text_muted or '#475569' }};
+  --bk-header-glass: {{ theme.header_glass or 'rgba(15, 23, 42, 0.45)' }};
+  --bk-header-blur: {{ theme.header_blur_px or 12 }}px;
+  --bk-theme-border: {{ theme.border or 'rgba(255, 255, 255, 0.10)' }};
+  --bk-radius-small: {{ theme.radius_small_px or 6 }}px;
+  --bk-radius-card: {{ theme.radius_card_px or 16 }}px;
+  --bk-button-radius: {{ theme.button_radius_px or 6 }}px;
+  --bk-section-spacing: {{ theme.section_spacing_px or 72 }}px;
+  --bk-max-width: {{ theme.max_width_px or 1280 }}px;
+}
+
+body { color: var(--bk-text); background: var(--bk-surface); }
+.bk-site-header,
+.bk-info-strip,
+.bk-brand-row,
+.bk-navigation-wrap { background: var(--bk-header-glass); -webkit-backdrop-filter: blur(var(--bk-header-blur)); backdrop-filter: blur(var(--bk-header-blur)); border-color: var(--bk-theme-border); }
+.bk-submenu,
+.bk-mobile-nav,
+.bk-footer { background: var(--bk-primary); }
+.bk-plan-button,
+.bk-mobile-plan,
+.btn-primary,
+.bk-footer-cta,
+.bk-newsletter-form button,
+.bk-trip-inquiry-primary { background: var(--bk-accent); border-radius: var(--bk-button-radius); }
+.bk-plan-button:hover,
+.bk-mobile-plan:hover,
+.btn-primary:hover,
+.bk-footer-cta:hover,
+.bk-newsletter-form button:hover,
+.bk-trip-inquiry-primary:hover { background: var(--bk-accent-hover); }
+.bk-home-section,
+.bk-destination-section,
+.bk-trust-section,
+.bk-home-faq,
+.bk-home-contact { padding-top: var(--bk-section-spacing); padding-bottom: var(--bk-section-spacing); }
+.bk-header-container,
+.bk-footer-top,
+.bk-footer-bottom,
+.bk-home-section,
+.bk-destination-section,
+.bk-trust-section,
+.bk-home-faq,
+.bk-home-contact { max-width: var(--bk-max-width); }
+.bk-card-grid > *,
+.bk-service-grid > *,
+.bk-destination-grid > *,
+.bk-trust-grid > * { border-radius: var(--bk-radius-card); }

@@ -1,0 +1,8 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{% for item in collections.all %}{% if item.url and item.data.published !== false and item.url != '/404.html' and not (item.data.seo.robots and 'noindex' in item.data.seo.robots) %}<url><loc>{{ site.url }}{{ item.url }}</loc>{% if item.data.last_verified or item.data.date_modified or item.data.date %}<lastmod>{{ (item.data.last_verified or item.data.date_modified or item.data.date) | isoDate }}</lastmod>{% endif %}{% set img = item.data.cover_image | safeMedia(item.data.cover_source, '') %}{% if img %}<image:image><image:loc>{{ img | absoluteUrl(site.url) }}</image:loc><image:caption>{{ item.data.title }}</image:caption></image:image>{% endif %}</url>{% endif %}{% endfor %}
+</urlset>

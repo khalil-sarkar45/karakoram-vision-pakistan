@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+permalink: /international-travelers/
+title: International Travelers
+summary: Practical information, destination ideas, group journeys and planning support for visitors traveling to Pakistan.
+seo:
+  title: Pakistan Travel Planning for International Visitors | Karakoram Vision Pakistan
+  description: Plan Pakistan travel with destination information, city tours, insurance guidance, group departures and local support.
+---
+{% set heroItems = collections.journeys | keywordItems('hunza,k2,kalash,nanga parbat,islamabad') | limit(6) %}{% set heroHeading = title %}{% set heroSummary = summary %}{% set heroEyebrow = 'Arrive informed' %}{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="bk-catalog-shell"><header class="bk-section-heading"><div><p class="eyebrow">Plan with confidence</p><h2>Useful starting points</h2><p>Research destinations, city tours, travel insurance, group journeys and local transport.</p></div></header><div class="bk-destination-grid">
+{% set links = [
+['Pakistan Travel Information','Culture, transport, safety and practical guidance','/blog/'],
+['Travel Insurance Guidance','Read current travel-insurance guides and considerations','/search/?type=blog&q=travel%20insurance'],
+['Best Sellers','Popular routes for first-time and returning visitors','/search/?type=all&q=best'],
+['City Tours','Islamabad, Lahore, Peshawar and Karachi experiences','/search/?type=tours&q=city'],
+['Group Tours','Join scheduled journeys or request a private group','/search/?type=tours&q=group'],
+['Tour Calendar','Search fixed departures and upcoming programmes','/search/?type=all&q=fixed%20departure'],
+['Vehicle Support','Airport, city and mountain transport options','/vehicles/'],
+['Plan a Custom Trip','Share your route, dates and group requirements','/plan-a-trip/']
+] %}
+{% for link in links %}<a href="{{ link[2] }}"><span>{{ loop.index }}</span><h3>{{ link[0] }}</h3><p>{{ link[1] }}</p></a>{% endfor %}</div></section>

@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+permalink: /trip-calendar/
+title: Trip Calendar
+seo:
+  title: Trip Calendar | Karakoram Vision Pakistan
+  description: Browse scheduled departures for tours, trekking, expeditions, jeep safaris and mountain journeys across Pakistan and Central Asia.
+---
+<section class="bk-page-hero-simple"><div><p class="eyebrow">Plan by date</p><h1>Trip Calendar</h1><p>Browse scheduled departures, availability and starting prices. Exact dates, permits and places remain subject to confirmation by our travel team.</p></div></section>
+<section class="bk-calendar-shell">
+  <div class="bk-calendar-intro"><div><p class="eyebrow">Scheduled journeys</p><h2 class="text-3xl font-black">Upcoming departure options</h2></div><a class="btn-primary" href="/plan-a-trip/#trip-request-form">Request custom dates</a></div>
+  <div class="bk-calendar-grid">
+    {% for item in collections.journeys | limit(150) %}
+      {% if item.data.departure_details and item.data.departure_details.length %}
+        {% for departure in item.data.departure_details | limit(3) %}
+        <article class="bk-calendar-card"><div><a class="bk-calendar-title" href="{{ item.url }}">{{ item.data.title }}</a><p class="bk-calendar-meta">{{ item.data.service_label }}{% if item.data.destination %} · {{ item.data.destination }}{% endif %}</p></div><div><small>Dates</small><strong>{{ departure.dates or departure.date }}</strong></div><div><small>Status</small><strong>{{ departure.status or 'Ask us' }}</strong></div><div><small>Deposit</small><strong>{{ departure.deposit or item.data.deposit or 'Ask us' }}</strong></div><div><small>Price</small><strong>{{ departure.price or item.data.price_from or 'Ask us' }}</strong></div><a href="/plan-a-trip/?journey={{ item.data.title | urlencode }}&start={{ (departure.dates or departure.date) | urlencode }}#trip-request-form">Inquire</a></article>
+        {% endfor %}
+      {% elseif item.data.departures and item.data.departures.length %}
+        {% for departure in item.data.departures | limit(2) %}<article class="bk-calendar-card"><div><a class="bk-calendar-title" href="{{ item.url }}">{{ item.data.title }}</a><p class="bk-calendar-meta">{{ item.data.service_label }}{% if item.data.destination %} · {{ item.data.destination }}{% endif %}</p></div><div><small>Dates</small><strong>{{ departure }}</strong></div><div><small>Status</small><strong>{{ item.data.trip_status or 'On request' }}</strong></div><div><small>Duration</small><strong>{{ item.data.duration or 'Ask us' }}</strong></div><div><small>Price</small><strong>{{ item.data.price_from or 'Ask us' }}</strong></div><a href="/plan-a-trip/?journey={{ item.data.title | urlencode }}&start={{ departure | urlencode }}#trip-request-form">Inquire</a></article>{% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="bk-landing-cta"><div><p class="eyebrow">Private departure</p><h2>None of these dates work?</h2><p>Send your preferred dates, travelers, budget and journey style. Our team will review route feasibility and availability.</p></div><a href="/plan-a-trip/#trip-request-form">Plan private dates</a></div>
+</section>

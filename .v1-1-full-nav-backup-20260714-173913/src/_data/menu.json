@@ -1,0 +1,214 @@
+{
+  "items": [
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "Home",
+      "url": "/",
+      "icon": "⌂"
+    },
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "Tours",
+      "url": "/tours/",
+      "children": [
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "All Tours",
+          "url": "/tours/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Hunza Valley",
+          "url": "/tours/hunza-valley-heritage-tour/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Skardu & Shigar",
+          "url": "/tours/skardu-shigar-valley-explorer/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Deosai & Khaplu",
+          "url": "/tours/deosai-khaplu-tour/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Gilgit-Baltistan Circuit",
+          "url": "/tours/gilgit-baltistan-grand-circuit/"
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "Trekking",
+      "url": "/trekking/",
+      "children": [
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "All Treks",
+          "url": "/trekking/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "K2 Base Camp",
+          "url": "/trekking/k2-base-camp-baltoro-trek/",
+          "icon": "★"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Gondogoro La Circuit",
+          "url": "/trekking/gondogoro-la-circuit-trek/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Rakaposhi Base Camp",
+          "url": "/trekking/rakaposhi-base-camp-trek/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Rush Lake",
+          "url": "/trekking/rush-lake-trek/"
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "Expeditions",
+      "url": "/expeditions/",
+      "children": [
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "All Expeditions",
+          "url": "/expeditions/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Spantik Peak",
+          "url": "/expeditions/spantik-peak-expedition/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Broad Peak",
+          "url": "/expeditions/broad-peak-expedition/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Gasherbrum II",
+          "url": "/expeditions/gasherbrum-ii-expedition/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Laila Peak",
+          "url": "/expeditions/laila-peak-expedition/"
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "Jeep Safaris",
+      "url": "/jeep-safaris/"
+    },
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "Destinations",
+      "url": "/destinations/",
+      "children": [
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Skardu",
+          "url": "/destinations/skardu/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Hunza",
+          "url": "/destinations/hunza/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Deosai",
+          "url": "/destinations/deosai/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Shigar",
+          "url": "/destinations/shigar/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Khaplu",
+          "url": "/destinations/khaplu/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Fairy Meadows",
+          "url": "/destinations/fairy-meadows/"
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "Travel Guides",
+      "url": "/blog/"
+    },
+    {
+      "enabled": true,
+      "target_blank": false,
+      "label": "About",
+      "url": "/about-us/",
+      "children": [
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "About Us",
+          "url": "/about-us/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Why Travel With Us",
+          "url": "/why-choose-us/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "FAQs",
+          "url": "/faqs/"
+        },
+        {
+          "enabled": true,
+          "target_blank": false,
+          "label": "Contact",
+          "url": "/contact-us/"
+        }
+      ]
+    }
+  ]
+}

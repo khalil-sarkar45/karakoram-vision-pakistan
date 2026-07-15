@@ -1,0 +1,25 @@
+---
+title: Privacy Policy
+slug: privacy-policy
+permalink: /privacy-policy/
+published: true
+featured: false
+summary: How Karakoram Vision Pakistan handles inquiry details and website information.
+answer_summary: How Karakoram Vision Pakistan handles inquiry details and website information.
+cover_image: ''
+gallery: []
+faqs: []
+author: Karakoram Vision Editorial Team
+reviewed_by: Karakoram Vision Travel Team
+last_verified: '2026-07-14'
+seo:
+  title: Privacy Policy | Karakoram Vision Pakistan
+  description: How Karakoram Vision Pakistan handles inquiry details and website information.
+  keywords: ''
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+  canonical: ''
+  social_image: /assets/uploads/brand/karakoram-vision-og.jpg
+layout: layouts/page.njk
+---
+
+<h2>Information you provide</h2><p>We may receive your name, contact details, travel dates, group information and trip preferences when you submit an inquiry.</p><h2>How information is used</h2><p>Inquiry details are used to prepare and communicate a travel proposal, manage an agreed booking and meet legal or operational requirements.</p><h2>Third-party services</h2><p>Email, messaging, analytics, payment or form providers may process information under their own terms. Sensitive payment data should only be shared through an approved payment channel.</p><h2>Contact</h2><p>Privacy questions can be sent to karakoramvision@gmail.com.</p>

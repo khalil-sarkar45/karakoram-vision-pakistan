@@ -1,0 +1,31 @@
+{
+  "name": "karakoram-vision-pakistan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build:assets && eleventy --serve",
+    "dev:full": "npm run build && wrangler pages dev _site --compatibility-date=2026-07-01",
+    "build:vendor": "node tools/copy-vendors.mjs",
+    "build:css": "tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/site.css --minify",
+    "build:data": "node tools/generate_runtime_catalog.mjs",
+    "build:assets": "npm run build:vendor && npm run build:css && npm run build:data",
+    "build": "npm run build:assets && eleventy",
+    "test": "node tools/run-python.mjs tests/final_audit.py",
+    "audit:seo": "node tools/run-python.mjs tests/seo_audit.py",
+    "audit:advanced": "node tools/run-python.mjs tests/advanced_discovery_audit.py && node tools/run-python.mjs tests/performance_budget.py",
+    "indexnow": "node tools/submit-indexnow.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11",
+    "wrangler": "^4.24.3",
+    "js-yaml": "^4.1.1"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.9",
+    "htmx.org": "^2.0.6"
+  },
+  "description": "Independent Karakoram Vision Pakistan travel website with Pages CMS, Cloudflare Pages, Eleventy, Tailwind, Alpine and HTMX."
+}

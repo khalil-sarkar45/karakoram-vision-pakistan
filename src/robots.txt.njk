@@ -1,0 +1,20 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+# Search crawlers and answer engines may index public pages.
+User-agent: *
+Allow: /
+
+# OpenAI search visibility is allowed; model-training crawl is opted out.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# Google Search and its AI search features use Googlebot. Google-Extended is separate.
+User-agent: Google-Extended
+Disallow: /
+
+Sitemap: {{ site.url }}/sitemap.xml

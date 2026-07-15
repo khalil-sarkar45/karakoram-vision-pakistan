@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+permalink: /destinations/
+title: Destinations
+summary: Explore Pakistan’s mountain regions, heritage cities, valleys, national parks and trekking gateways.
+seo:
+  title: Pakistan Destinations & Mountain Regions | Karakoram Vision Pakistan
+  description: Discover Hunza, Skardu, Gilgit-Baltistan, Chitral, Kashmir and other Pakistan destinations with Karakoram Vision Pakistan.
+---
+{% set heroItems = collections.journeys | keywordItems('hunza,skardu,gilgit,chitral,kashmir,deosai') | limit(6) %}
+{% set heroHeading = title %}{% set heroSummary = summary %}{% set heroEyebrow = 'Where will you go next?' %}{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="bk-catalog-shell"><header class="bk-section-heading"><div><p class="eyebrow">Explore by place</p><h2>Popular destinations</h2><p>Each destination connects to relevant tours, treks, expeditions and travel guides.</p></div></header><div class="bk-destination-grid">
+{% set destinations = [
+['Hunza','Karakoram valleys, forts, villages and scenic road journeys','/search/?type=all&q=hunza'],
+['Skardu','Gateway to K2, Baltoro, Deosai and the eastern Karakoram','/search/?type=all&q=skardu'],
+['Gilgit-Baltistan','High-mountain travel across Pakistan’s northern regions','/search/?type=all&q=gilgit'],
+['Chitral & Kalash','Hindu Kush valleys, festivals and cultural travel','/search/?type=all&q=chitral'],
+['Kashmir','Alpine lakes, forest routes and mountain escapes','/search/?type=all&q=kashmir'],
+['Nanga Parbat Region','Base camps, Fairy Meadows and Himalayan routes','/search/?type=all&q=nanga%20parbat'],
+['Deosai Plateau','Wildlife, high plains and 4x4 journeys','/search/?type=all&q=deosai'],
+['Islamabad & Rawalpindi','Arrival services, city tours and road-trip gateways','/search/?type=all&q=islamabad'],
+['Lahore & Punjab','Heritage, food, architecture and cultural journeys','/search/?type=all&q=lahore']
+] %}
+{% for place in destinations %}<a href="{{ place[2] }}"><span>{{ loop.index }}</span><h3>{{ place[0] }}</h3><p>{{ place[1] }}</p></a>{% endfor %}</div></section>

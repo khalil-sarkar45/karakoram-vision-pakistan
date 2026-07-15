@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /guest-reviews/
+title: Guest Reviews
+summary: Traveler feedback and verified journey experiences with Karakoram Vision Pakistan.
+seo:
+  title: Guest Reviews | Karakoram Vision Pakistan
+  description: Read traveler feedback and journey experiences with Karakoram Vision Pakistan.
+---
+{% set heroItems = collections.journeys | limit(6) %}{% set heroHeading = title %}{% set heroSummary = summary %}{% set heroEyebrow = 'Traveler experiences' %}{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="mx-auto max-w-5xl px-4 py-12"><div class="rounded-2xl border border-blue-100 bg-blue-50 p-8"><h2 class="text-2xl font-black">Share your experience</h2><p class="mt-3 text-slate-700">Completed a journey with our team? Contact us with your booking reference and review.</p><a class="btn-primary mt-5" href="/contact-us/">Submit a review</a></div></section>

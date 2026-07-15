@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+permalink: /holiday-types/
+title: Holiday Types
+summary: Find cultural tours, family holidays, luxury journeys, road trips, trekking holidays and weekend escapes.
+seo:
+  title: Holiday Types in Pakistan | Karakoram Vision Pakistan
+  description: Browse cultural tours, family holidays, luxury travel, road trips, trekking holidays and weekend escapes in Pakistan.
+---
+{% set heroItems = collections.tours | limit(6) %}{% set heroHeading = title %}{% set heroSummary = summary %}{% set heroEyebrow = 'Choose your travel style' %}{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="bk-catalog-shell"><header class="bk-section-heading"><div><p class="eyebrow">Travel your way</p><h2>Browse by holiday style</h2><p>Start with a category, then refine by destination, duration and interests.</p></div></header><div class="bk-destination-grid">
+{% set types = [
+['Cultural Tours','Heritage, food, architecture and living traditions','/search/?type=tours&q=cultural'],
+['Family Holidays','Flexible routes and family-friendly pacing','/search/?type=tours&q=family'],
+['Hiking Adventures','Day hikes, short treks and scenic walks','/search/?type=trekking&q=hike'],
+['Honeymoon Journeys','Private scenic journeys and premium stays','/search/?type=tours&q=honeymoon'],
+['Luxury Tours','Private transport, premium hotels and tailored service','/search/?type=tours&q=luxury'],
+['Road Trips','Multi-region journeys by private vehicle','/search/?type=tours&q=road%20trip'],
+['Trekking Holidays','Base camps, glaciers, passes and high valleys','/trekking/'],
+['Weekend Retreats','Short escapes from major cities','/search/?type=tours&q=weekend'],
+['Camping','Outdoor journeys and mountain camps','/search/?type=tours&q=camping']
+] %}
+{% for type in types %}<a href="{{ type[2] }}"><span>{{ loop.index }}</span><h3>{{ type[0] }}</h3><p>{{ type[1] }}</p></a>{% endfor %}</div></section>

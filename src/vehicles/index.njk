@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+permalink: /vehicles/
+title: Vehicles
+summary: Mountain jeeps, SUVs, vans, coasters and transport options for tours and expeditions.
+seo:
+  title: Vehicle Rental & Mountain Transport Pakistan | Karakoram Vision Pakistan
+  description: Browse mountain jeeps, SUVs, vans and buses for travel and expedition logistics across Pakistan.
+---
+{% set heroItems = collections.vehicles | limit(6) %}
+{% set heroHeading = title %}
+{% set heroSummary = summary %}
+{% set heroEyebrow = 'Ground transport' %}
+{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="bk-catalog-shell"><header class="bk-section-heading"><div><p class="eyebrow">Choose your transport</p><h2>Available vehicles</h2><p>Request availability and a route-based quote through the trip planner.</p></div><span class="bk-count-pill">{{ collections.vehicles.length }} vehicles</span></header><div class="bk-card-grid">{% for item in collections.vehicles %}{% include "components/vehicle-card.njk" %}{% endfor %}</div></section>

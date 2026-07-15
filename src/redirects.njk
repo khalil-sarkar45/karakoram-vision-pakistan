@@ -1,0 +1,9 @@
+---
+pagination:
+  data: redirects
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.from }}"
+eleventyExcludeFromCollections: true
+---
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url={{ redirect.to }}"><link rel="canonical" href="{{ site.url }}{{ redirect.to }}"><title>Page moved | Karakoram Vision Pakistan</title></head><body><p>This page moved to <a href="{{ redirect.to }}">{{ redirect.to }}</a>.</p></body></html>

@@ -1,0 +1,6 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>{{ site.name }} Travel Guides</title><link>{{ site.url }}/blog/</link><description>{{ site.description }}</description><language>{{ site.language or 'en' }}</language>{% for item in collections.posts | limit(50) %}<item><title>{{ item.data.title }}</title><link>{{ site.url }}{{ item.url }}</link><guid>{{ site.url }}{{ item.url }}</guid><description><![CDATA[{{ item.data.summary or item.templateContent | stripHtml }}]]></description>{% if item.data.date %}<pubDate>{{ item.data.date }}</pubDate>{% endif %}</item>{% endfor %}</channel></rss>

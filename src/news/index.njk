@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /news/
+title: News & Updates
+summary: Expedition updates, destination stories, travel announcements and new Karakoram Vision Pakistan journeys.
+seo:
+  title: Karakoram Vision Pakistan News & Travel Updates
+  description: Read expedition updates, destination stories and new travel announcements from Karakoram Vision Pakistan.
+---
+{% set heroItems = collections.posts | limit(6) %}{% set heroHeading = title %}{% set heroSummary = summary %}{% set heroEyebrow = 'Stories from the mountains' %}{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="bk-catalog-shell"><header class="bk-section-heading"><div><p class="eyebrow">Latest</p><h2>Travel stories and updates</h2><p>Browse our latest guides and expedition-related articles.</p></div><a class="bk-heading-link" href="/blog/">All travel guides</a></header><div class="bk-card-grid">{% for item in collections.posts | limit(18) %}{% include "components/post-card.njk" %}{% endfor %}</div></section>

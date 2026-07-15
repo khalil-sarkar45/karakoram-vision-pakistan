@@ -1,0 +1,3352 @@
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      create: Create {path} via Karakoram Vision Pakistan CMS
+      update: Update {path} via Karakoram Vision Pakistan CMS
+      delete: Delete {path} via Karakoram Vision Pakistan CMS
+      rename: Rename {oldPath} to {newPath} via Karakoram Vision Pakistan CMS
+    identity: app
+components:
+  seo:
+    type: object
+    label: SEO, GEO, AEO & Social
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  faqs:
+    type: object
+    label: Frequently asked questions
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  sources:
+    type: object
+    label: Sources and references
+    list: true
+    fields:
+    - name: label
+      label: Source label
+      type: string
+    - name: url
+      label: Source URL
+      type: string
+  key_facts:
+    type: object
+    label: Key facts
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Value
+      type: string
+  link_list:
+    type: object
+    label: Links
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+      required: true
+    - name: url
+      label: URL
+      type: string
+      required: true
+    - name: target_blank
+      label: Open in new tab
+      type: boolean
+      default: false
+    - name: enabled
+      label: Visible
+      type: boolean
+      default: true
+content:
+- name: tours
+  label: Tours
+  type: collection
+  path: src/content/tours
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - featured
+    - fixed_departure
+    - duration
+    - price_from
+    - destination
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: Use lowercase letters, numbers and hyphens only.
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+    description: 'Example: /tours/your-slug/'
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/journey.njk
+    hidden: true
+  - name: service_type
+    label: Service type
+    type: string
+    default: tours
+    hidden: true
+  - name: service_label
+    label: Service label
+    type: string
+    default: Tours
+    hidden: true
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: best_seller
+    label: Best seller
+    type: boolean
+    default: false
+  - name: fixed_departure
+    label: Fixed departure
+    type: boolean
+    default: false
+  - name: departure_type
+    label: Departure type
+    type: select
+    options:
+    - Private
+    - Fixed Departure
+    - Group Departure
+    - Custom
+  - name: trip_status
+    label: Availability/status
+    type: select
+    options:
+    - Available
+    - Limited places
+    - On request
+    - Sold out
+    - Draft
+  - name: summary
+    label: Short description
+    type: text
+    required: true
+  - name: answer_summary
+    label: Quick answer (AEO/GEO)
+    type: text
+  - name: cover_image
+    label: Cover image
+    type: image
+  - name: cover_image_alt
+    label: Cover image alt text
+    type: string
+  - name: gallery
+    label: Gallery images
+    type: image
+    list: true
+  - name: duration
+    label: Duration
+    type: string
+  - name: duration_days
+    label: Duration in days
+    type: number
+    options:
+      min: 1
+      max: 365
+  - name: price_from
+    label: Price from
+    type: string
+  - name: deposit
+    label: Deposit
+    type: string
+  - name: price_currency
+    label: Currency
+    type: select
+    options:
+    - USD
+    - PKR
+    - EUR
+    - GBP
+  - name: group_size
+    label: Group size
+    type: string
+  - name: difficulty
+    label: Difficulty
+    type: select
+    options:
+    - Easy
+    - Moderate
+    - Challenging
+    - Strenuous
+    - Expedition
+  - name: destination
+    label: Destination
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: tags
+    label: Tags
+    type: string
+    list: true
+  - name: departures
+    label: Departure dates
+    type: date
+    list: true
+  - name: departure_details
+    label: Detailed departure rows
+    type: object
+    list: true
+    fields:
+    - name: dates
+      label: Dates
+      type: string
+    - name: status
+      label: Status
+      type: string
+    - name: places
+      label: Places
+      type: string
+    - name: deposit
+      label: Deposit
+      type: string
+    - name: price
+      label: Full price
+      type: string
+    - name: note
+      label: Note
+      type: text
+  - name: highlights
+    label: Highlights
+    type: string
+    list: true
+  - name: included
+    label: Included
+    type: string
+    list: true
+  - name: excluded
+    label: Excluded
+    type: string
+    list: true
+  - name: packing_list
+    label: Packing list
+    type: string
+    list: true
+  - name: route_map_url
+    label: Route map URL
+    type: string
+  - name: trip_leader
+    label: Trip leader
+    type: object
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Role
+      type: string
+    - name: image
+      label: Photo
+      type: image
+    - name: bio
+      label: Biography
+      type: text
+  - name: reviews
+    label: Guest reviews
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: Guest name
+      type: string
+    - name: country
+      label: Country
+      type: string
+    - name: rating
+      label: Rating
+      type: number
+      options:
+        min: 1
+        max: 5
+        step: 0.1
+    - name: quote
+      label: Review
+      type: text
+    - name: date
+      label: Date
+      type: date
+  - name: faqs
+    label: FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: key_facts
+    label: Key facts
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Value
+      type: string
+  - name: author
+    label: Prepared by
+    type: string
+  - name: reviewed_by
+    label: Reviewed by
+    type: string
+  - name: last_verified
+    label: Last verified
+    type: date
+  - name: sources
+    label: Sources
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Source label
+      type: string
+    - name: url
+      label: Source URL
+      type: string
+  - name: seo
+    label: SEO, GEO, AEO & Social
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Full content / itinerary
+    type: rich-text
+- name: trekking
+  label: Trekking
+  type: collection
+  path: src/content/trekking
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - featured
+    - fixed_departure
+    - duration
+    - price_from
+    - destination
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: Use lowercase letters, numbers and hyphens only.
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+    description: 'Example: /trekking/your-slug/'
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/journey.njk
+    hidden: true
+  - name: service_type
+    label: Service type
+    type: string
+    default: trekking
+    hidden: true
+  - name: service_label
+    label: Service label
+    type: string
+    default: Trekking
+    hidden: true
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: best_seller
+    label: Best seller
+    type: boolean
+    default: false
+  - name: fixed_departure
+    label: Fixed departure
+    type: boolean
+    default: false
+  - name: departure_type
+    label: Departure type
+    type: select
+    options:
+    - Private
+    - Fixed Departure
+    - Group Departure
+    - Custom
+  - name: trip_status
+    label: Availability/status
+    type: select
+    options:
+    - Available
+    - Limited places
+    - On request
+    - Sold out
+    - Draft
+  - name: summary
+    label: Short description
+    type: text
+    required: true
+  - name: answer_summary
+    label: Quick answer (AEO/GEO)
+    type: text
+  - name: cover_image
+    label: Cover image
+    type: image
+  - name: cover_image_alt
+    label: Cover image alt text
+    type: string
+  - name: gallery
+    label: Gallery images
+    type: image
+    list: true
+  - name: duration
+    label: Duration
+    type: string
+  - name: duration_days
+    label: Duration in days
+    type: number
+    options:
+      min: 1
+      max: 365
+  - name: price_from
+    label: Price from
+    type: string
+  - name: deposit
+    label: Deposit
+    type: string
+  - name: price_currency
+    label: Currency
+    type: select
+    options:
+    - USD
+    - PKR
+    - EUR
+    - GBP
+  - name: group_size
+    label: Group size
+    type: string
+  - name: difficulty
+    label: Difficulty
+    type: select
+    options:
+    - Easy
+    - Moderate
+    - Challenging
+    - Strenuous
+    - Expedition
+  - name: destination
+    label: Destination
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: tags
+    label: Tags
+    type: string
+    list: true
+  - name: departures
+    label: Departure dates
+    type: date
+    list: true
+  - name: departure_details
+    label: Detailed departure rows
+    type: object
+    list: true
+    fields:
+    - name: dates
+      label: Dates
+      type: string
+    - name: status
+      label: Status
+      type: string
+    - name: places
+      label: Places
+      type: string
+    - name: deposit
+      label: Deposit
+      type: string
+    - name: price
+      label: Full price
+      type: string
+    - name: note
+      label: Note
+      type: text
+  - name: highlights
+    label: Highlights
+    type: string
+    list: true
+  - name: included
+    label: Included
+    type: string
+    list: true
+  - name: excluded
+    label: Excluded
+    type: string
+    list: true
+  - name: packing_list
+    label: Packing list
+    type: string
+    list: true
+  - name: route_map_url
+    label: Route map URL
+    type: string
+  - name: trip_leader
+    label: Trip leader
+    type: object
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Role
+      type: string
+    - name: image
+      label: Photo
+      type: image
+    - name: bio
+      label: Biography
+      type: text
+  - name: reviews
+    label: Guest reviews
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: Guest name
+      type: string
+    - name: country
+      label: Country
+      type: string
+    - name: rating
+      label: Rating
+      type: number
+      options:
+        min: 1
+        max: 5
+        step: 0.1
+    - name: quote
+      label: Review
+      type: text
+    - name: date
+      label: Date
+      type: date
+  - name: faqs
+    label: FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: key_facts
+    label: Key facts
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Value
+      type: string
+  - name: author
+    label: Prepared by
+    type: string
+  - name: reviewed_by
+    label: Reviewed by
+    type: string
+  - name: last_verified
+    label: Last verified
+    type: date
+  - name: sources
+    label: Sources
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Source label
+      type: string
+    - name: url
+      label: Source URL
+      type: string
+  - name: seo
+    label: SEO, GEO, AEO & Social
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Full content / itinerary
+    type: rich-text
+- name: expeditions
+  label: Expeditions
+  type: collection
+  path: src/content/expeditions
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - featured
+    - fixed_departure
+    - duration
+    - price_from
+    - destination
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: Use lowercase letters, numbers and hyphens only.
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+    description: 'Example: /expeditions/your-slug/'
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/journey.njk
+    hidden: true
+  - name: service_type
+    label: Service type
+    type: string
+    default: expeditions
+    hidden: true
+  - name: service_label
+    label: Service label
+    type: string
+    default: Expeditions
+    hidden: true
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: best_seller
+    label: Best seller
+    type: boolean
+    default: false
+  - name: fixed_departure
+    label: Fixed departure
+    type: boolean
+    default: false
+  - name: departure_type
+    label: Departure type
+    type: select
+    options:
+    - Private
+    - Fixed Departure
+    - Group Departure
+    - Custom
+  - name: trip_status
+    label: Availability/status
+    type: select
+    options:
+    - Available
+    - Limited places
+    - On request
+    - Sold out
+    - Draft
+  - name: summary
+    label: Short description
+    type: text
+    required: true
+  - name: answer_summary
+    label: Quick answer (AEO/GEO)
+    type: text
+  - name: cover_image
+    label: Cover image
+    type: image
+  - name: cover_image_alt
+    label: Cover image alt text
+    type: string
+  - name: gallery
+    label: Gallery images
+    type: image
+    list: true
+  - name: duration
+    label: Duration
+    type: string
+  - name: duration_days
+    label: Duration in days
+    type: number
+    options:
+      min: 1
+      max: 365
+  - name: price_from
+    label: Price from
+    type: string
+  - name: deposit
+    label: Deposit
+    type: string
+  - name: price_currency
+    label: Currency
+    type: select
+    options:
+    - USD
+    - PKR
+    - EUR
+    - GBP
+  - name: group_size
+    label: Group size
+    type: string
+  - name: difficulty
+    label: Difficulty
+    type: select
+    options:
+    - Easy
+    - Moderate
+    - Challenging
+    - Strenuous
+    - Expedition
+  - name: destination
+    label: Destination
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: tags
+    label: Tags
+    type: string
+    list: true
+  - name: departures
+    label: Departure dates
+    type: date
+    list: true
+  - name: departure_details
+    label: Detailed departure rows
+    type: object
+    list: true
+    fields:
+    - name: dates
+      label: Dates
+      type: string
+    - name: status
+      label: Status
+      type: string
+    - name: places
+      label: Places
+      type: string
+    - name: deposit
+      label: Deposit
+      type: string
+    - name: price
+      label: Full price
+      type: string
+    - name: note
+      label: Note
+      type: text
+  - name: highlights
+    label: Highlights
+    type: string
+    list: true
+  - name: included
+    label: Included
+    type: string
+    list: true
+  - name: excluded
+    label: Excluded
+    type: string
+    list: true
+  - name: packing_list
+    label: Packing list
+    type: string
+    list: true
+  - name: route_map_url
+    label: Route map URL
+    type: string
+  - name: trip_leader
+    label: Trip leader
+    type: object
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Role
+      type: string
+    - name: image
+      label: Photo
+      type: image
+    - name: bio
+      label: Biography
+      type: text
+  - name: reviews
+    label: Guest reviews
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: Guest name
+      type: string
+    - name: country
+      label: Country
+      type: string
+    - name: rating
+      label: Rating
+      type: number
+      options:
+        min: 1
+        max: 5
+        step: 0.1
+    - name: quote
+      label: Review
+      type: text
+    - name: date
+      label: Date
+      type: date
+  - name: faqs
+    label: FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: key_facts
+    label: Key facts
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Value
+      type: string
+  - name: author
+    label: Prepared by
+    type: string
+  - name: reviewed_by
+    label: Reviewed by
+    type: string
+  - name: last_verified
+    label: Last verified
+    type: date
+  - name: sources
+    label: Sources
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Source label
+      type: string
+    - name: url
+      label: Source URL
+      type: string
+  - name: seo
+    label: SEO, GEO, AEO & Social
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Full content / itinerary
+    type: rich-text
+- name: jeep_safaris
+  label: Jeep Safaris
+  type: collection
+  path: src/content/jeep-safaris
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - featured
+    - fixed_departure
+    - duration
+    - price_from
+    - destination
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: Use lowercase letters, numbers and hyphens only.
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+    description: 'Example: /jeep-safaris/your-slug/'
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/journey.njk
+    hidden: true
+  - name: service_type
+    label: Service type
+    type: string
+    default: jeep-safaris
+    hidden: true
+  - name: service_label
+    label: Service label
+    type: string
+    default: Jeep Safaris
+    hidden: true
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: best_seller
+    label: Best seller
+    type: boolean
+    default: false
+  - name: fixed_departure
+    label: Fixed departure
+    type: boolean
+    default: false
+  - name: departure_type
+    label: Departure type
+    type: select
+    options:
+    - Private
+    - Fixed Departure
+    - Group Departure
+    - Custom
+  - name: trip_status
+    label: Availability/status
+    type: select
+    options:
+    - Available
+    - Limited places
+    - On request
+    - Sold out
+    - Draft
+  - name: summary
+    label: Short description
+    type: text
+    required: true
+  - name: answer_summary
+    label: Quick answer (AEO/GEO)
+    type: text
+  - name: cover_image
+    label: Cover image
+    type: image
+  - name: cover_image_alt
+    label: Cover image alt text
+    type: string
+  - name: gallery
+    label: Gallery images
+    type: image
+    list: true
+  - name: duration
+    label: Duration
+    type: string
+  - name: duration_days
+    label: Duration in days
+    type: number
+    options:
+      min: 1
+      max: 365
+  - name: price_from
+    label: Price from
+    type: string
+  - name: deposit
+    label: Deposit
+    type: string
+  - name: price_currency
+    label: Currency
+    type: select
+    options:
+    - USD
+    - PKR
+    - EUR
+    - GBP
+  - name: group_size
+    label: Group size
+    type: string
+  - name: difficulty
+    label: Difficulty
+    type: select
+    options:
+    - Easy
+    - Moderate
+    - Challenging
+    - Strenuous
+    - Expedition
+  - name: destination
+    label: Destination
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: tags
+    label: Tags
+    type: string
+    list: true
+  - name: departures
+    label: Departure dates
+    type: date
+    list: true
+  - name: departure_details
+    label: Detailed departure rows
+    type: object
+    list: true
+    fields:
+    - name: dates
+      label: Dates
+      type: string
+    - name: status
+      label: Status
+      type: string
+    - name: places
+      label: Places
+      type: string
+    - name: deposit
+      label: Deposit
+      type: string
+    - name: price
+      label: Full price
+      type: string
+    - name: note
+      label: Note
+      type: text
+  - name: highlights
+    label: Highlights
+    type: string
+    list: true
+  - name: included
+    label: Included
+    type: string
+    list: true
+  - name: excluded
+    label: Excluded
+    type: string
+    list: true
+  - name: packing_list
+    label: Packing list
+    type: string
+    list: true
+  - name: route_map_url
+    label: Route map URL
+    type: string
+  - name: trip_leader
+    label: Trip leader
+    type: object
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Role
+      type: string
+    - name: image
+      label: Photo
+      type: image
+    - name: bio
+      label: Biography
+      type: text
+  - name: reviews
+    label: Guest reviews
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: Guest name
+      type: string
+    - name: country
+      label: Country
+      type: string
+    - name: rating
+      label: Rating
+      type: number
+      options:
+        min: 1
+        max: 5
+        step: 0.1
+    - name: quote
+      label: Review
+      type: text
+    - name: date
+      label: Date
+      type: date
+  - name: faqs
+    label: FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: key_facts
+    label: Key facts
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Value
+      type: string
+  - name: author
+    label: Prepared by
+    type: string
+  - name: reviewed_by
+    label: Reviewed by
+    type: string
+  - name: last_verified
+    label: Last verified
+    type: date
+  - name: sources
+    label: Sources
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Source label
+      type: string
+    - name: url
+      label: Source URL
+      type: string
+  - name: seo
+    label: SEO, GEO, AEO & Social
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Full content / itinerary
+    type: rich-text
+- name: hunting_services
+  label: Hunting Services
+  type: collection
+  path: src/content/hunting-services
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - featured
+    - fixed_departure
+    - duration
+    - price_from
+    - destination
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: Use lowercase letters, numbers and hyphens only.
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+    description: 'Example: /hunting-services/your-slug/'
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/journey.njk
+    hidden: true
+  - name: service_type
+    label: Service type
+    type: string
+    default: hunting-services
+    hidden: true
+  - name: service_label
+    label: Service label
+    type: string
+    default: Licensed Hunting Services
+    hidden: true
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: best_seller
+    label: Best seller
+    type: boolean
+    default: false
+  - name: fixed_departure
+    label: Fixed departure
+    type: boolean
+    default: false
+  - name: departure_type
+    label: Departure type
+    type: select
+    options:
+    - Private
+    - Fixed Departure
+    - Group Departure
+    - Custom
+  - name: trip_status
+    label: Availability/status
+    type: select
+    options:
+    - Available
+    - Limited places
+    - On request
+    - Sold out
+    - Draft
+  - name: summary
+    label: Short description
+    type: text
+    required: true
+  - name: answer_summary
+    label: Quick answer (AEO/GEO)
+    type: text
+  - name: cover_image
+    label: Cover image
+    type: image
+  - name: cover_image_alt
+    label: Cover image alt text
+    type: string
+  - name: gallery
+    label: Gallery images
+    type: image
+    list: true
+  - name: duration
+    label: Duration
+    type: string
+  - name: duration_days
+    label: Duration in days
+    type: number
+    options:
+      min: 1
+      max: 365
+  - name: price_from
+    label: Price from
+    type: string
+  - name: deposit
+    label: Deposit
+    type: string
+  - name: price_currency
+    label: Currency
+    type: select
+    options:
+    - USD
+    - PKR
+    - EUR
+    - GBP
+  - name: group_size
+    label: Group size
+    type: string
+  - name: difficulty
+    label: Difficulty
+    type: select
+    options:
+    - Easy
+    - Moderate
+    - Challenging
+    - Strenuous
+    - Expedition
+  - name: destination
+    label: Destination
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: tags
+    label: Tags
+    type: string
+    list: true
+  - name: departures
+    label: Departure dates
+    type: date
+    list: true
+  - name: departure_details
+    label: Detailed departure rows
+    type: object
+    list: true
+    fields:
+    - name: dates
+      label: Dates
+      type: string
+    - name: status
+      label: Status
+      type: string
+    - name: places
+      label: Places
+      type: string
+    - name: deposit
+      label: Deposit
+      type: string
+    - name: price
+      label: Full price
+      type: string
+    - name: note
+      label: Note
+      type: text
+  - name: highlights
+    label: Highlights
+    type: string
+    list: true
+  - name: included
+    label: Included
+    type: string
+    list: true
+  - name: excluded
+    label: Excluded
+    type: string
+    list: true
+  - name: packing_list
+    label: Packing list
+    type: string
+    list: true
+  - name: route_map_url
+    label: Route map URL
+    type: string
+  - name: trip_leader
+    label: Trip leader
+    type: object
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Role
+      type: string
+    - name: image
+      label: Photo
+      type: image
+    - name: bio
+      label: Biography
+      type: text
+  - name: reviews
+    label: Guest reviews
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: Guest name
+      type: string
+    - name: country
+      label: Country
+      type: string
+    - name: rating
+      label: Rating
+      type: number
+      options:
+        min: 1
+        max: 5
+        step: 0.1
+    - name: quote
+      label: Review
+      type: text
+    - name: date
+      label: Date
+      type: date
+  - name: faqs
+    label: FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: key_facts
+    label: Key facts
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Value
+      type: string
+  - name: author
+    label: Prepared by
+    type: string
+  - name: reviewed_by
+    label: Reviewed by
+    type: string
+  - name: last_verified
+    label: Last verified
+    type: date
+  - name: sources
+    label: Sources
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Source label
+      type: string
+    - name: url
+      label: Source URL
+      type: string
+  - name: seo
+    label: SEO, GEO, AEO & Social
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Full content / itinerary
+    type: rich-text
+- name: blog
+  label: Travel Guides & News
+  type: collection
+  path: src/content/blog
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - featured
+    - date
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+    pattern: ^[a-z0-9-]+$
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/post.njk
+    hidden: true
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: date
+    label: Publication date
+    type: date
+  - name: summary
+    label: Summary
+    type: text
+  - name: cover_image
+    label: Featured image
+    type: image
+  - name: cover_image_alt
+    label: Image alt text
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: tags
+    label: Tags
+    type: string
+    list: true
+  - name: answer_summary
+    label: Quick answer
+    type: text
+  - name: faqs
+    label: FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: author
+    label: Author
+    type: string
+  - name: reviewed_by
+    label: Reviewed by
+    type: string
+  - name: last_verified
+    label: Last verified
+    type: date
+  - name: seo
+    label: SEO, GEO, AEO & Social
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Article content
+    type: rich-text
+- name: vehicles
+  label: Vehicles
+  type: collection
+  path: src/content/vehicles
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - featured
+    - capacity
+    - price_from
+  fields:
+  - name: title
+    label: Vehicle name
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/vehicle.njk
+    hidden: true
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: summary
+    label: Summary
+    type: text
+  - name: cover_image
+    label: Cover image
+    type: image
+  - name: gallery
+    label: Gallery
+    type: image
+    list: true
+  - name: capacity
+    label: Passenger capacity
+    type: string
+  - name: luggage
+    label: Luggage capacity
+    type: string
+  - name: vehicle_type
+    label: Vehicle type
+    type: string
+  - name: price_from
+    label: Price from
+    type: string
+  - name: features
+    label: Features
+    type: string
+    list: true
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Full description
+    type: rich-text
+- name: pages
+  label: General, Destination, Hotel & Policy Pages
+  type: collection
+  path: src/content/pages
+  filename:
+    template: '{slug}.md'
+    field: create
+  operations:
+    create: true
+    rename: true
+    delete: true
+  view:
+    primary: title
+    fields:
+    - title
+    - published
+    - permalink
+    - featured
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: slug
+    label: Slug
+    type: string
+    required: true
+  - name: permalink
+    label: URL path
+    type: string
+    required: true
+  - name: layout
+    label: Layout
+    type: string
+    default: layouts/page.njk
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+  - name: featured
+    label: Featured
+    type: boolean
+    default: false
+  - name: summary
+    label: Summary
+    type: text
+  - name: cover_image
+    label: Cover/hero image
+    type: image
+  - name: cover_image_alt
+    label: Image alt text
+    type: string
+  - name: categories
+    label: Categories
+    type: string
+    list: true
+  - name: answer_summary
+    label: Quick answer
+    type: text
+  - name: faqs
+    label: FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: seo
+    label: SEO, GEO, AEO & Social
+    type: object
+    fields:
+    - name: title
+      label: SEO title
+      type: string
+    - name: description
+      label: Meta description
+      type: text
+    - name: keywords
+      label: Keywords
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+      description: 'Example: index, follow, max-image-preview:large'
+    - name: canonical
+      label: Custom canonical
+      type: string
+    - name: social_image
+      label: Social/OG image
+      type: image
+  - name: body
+    label: Page content
+    type: rich-text
+- name: site
+  label: 01 — Site Identity, Logos, Contacts & Social
+  type: file
+  path: src/_data/site.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: name
+    label: Business/website name
+    type: string
+    required: true
+  - name: tagline
+    label: Tagline
+    type: string
+  - name: url
+    label: Live website URL
+    type: string
+  - name: description
+    label: Default website description
+    type: text
+  - name: language
+    label: Default language code
+    type: string
+  - name: logo
+    label: Main logo
+    type: image
+  - name: logo_dark
+    label: Dark-background logo
+    type: image
+  - name: logo_light
+    label: Light-background logo
+    type: image
+  - name: mobile_logo
+    label: Mobile logo
+    type: image
+  - name: favicon
+    label: Favicon
+    type: image
+  - name: email
+    label: Public email
+    type: string
+  - name: booking_email
+    label: Booking email
+    type: string
+  - name: phone
+    label: Phone
+    type: string
+  - name: phone_secondary
+    label: Alternate phone
+    type: string
+  - name: address
+    label: Primary office address
+    type: text
+  - name: forms
+    label: Form endpoints
+    type: object
+    fields:
+    - name: booking_google_form
+      label: Booking Google Form URL
+      type: string
+    - name: contact_formspree
+      label: Contact Formspree endpoint
+      type: string
+    - name: newsletter_formspree
+      label: Newsletter Formspree endpoint
+      type: string
+  - name: contact
+    label: International messaging applications
+    type: object
+    fields:
+    - name: whatsapp
+      label: WhatsApp number (country code, no +)
+      type: string
+    - name: telegram
+      label: Telegram URL
+      type: string
+    - name: messenger
+      label: Messenger URL
+      type: string
+    - name: line
+      label: LINE URL/ID
+      type: string
+    - name: wechat_id
+      label: WeChat ID
+      type: string
+    - name: wechat_qr
+      label: WeChat QR image
+      type: image
+    - name: viber
+      label: Viber URL/number
+      type: string
+    - name: kakaotalk
+      label: KakaoTalk ID/URL
+      type: string
+    - name: vk
+      label: VK URL
+      type: string
+    - name: max_russia
+      label: MAX URL
+      type: string
+    - name: signal
+      label: Signal URL/number
+      type: string
+    - name: zalo
+      label: Zalo URL/number
+      type: string
+    - name: imo
+      label: imo URL/number
+      type: string
+    - name: skype
+      label: Skype ID/URL
+      type: string
+  - name: social
+    label: Social accounts
+    type: object
+    fields:
+    - name: facebook
+      label: Facebook URL
+      type: string
+    - name: instagram
+      label: Instagram URL
+      type: string
+    - name: youtube
+      label: YouTube URL
+      type: string
+    - name: linkedin
+      label: LinkedIn URL
+      type: string
+    - name: tripadvisor
+      label: Tripadvisor URL
+      type: string
+    - name: x
+      label: X/Twitter URL
+      type: string
+    - name: tiktok
+      label: TikTok URL
+      type: string
+    - name: pinterest
+      label: Pinterest URL
+      type: string
+    - name: threads
+      label: Threads URL
+      type: string
+    - name: google_business
+      label: Google Business URL
+      type: string
+    - name: bluesky
+      label: Bluesky URL
+      type: string
+  - name: business
+    label: Business/legal details
+    type: object
+    fields:
+    - name: legal_name
+      label: Legal name
+      type: string
+    - name: founded_year
+      label: Founded year
+      type: string
+    - name: license_number
+      label: Tourism/license number
+      type: string
+    - name: price_currency
+      label: Default currency
+      type: select
+      options:
+      - USD
+      - PKR
+      - EUR
+      - GBP
+  - name: geo
+    label: Geographic details
+    type: object
+    fields:
+    - name: country_code
+      label: Country code
+      type: string
+    - name: country
+      label: Country
+      type: string
+    - name: city
+      label: City
+      type: string
+    - name: latitude
+      label: Latitude
+      type: string
+    - name: longitude
+      label: Longitude
+      type: string
+    - name: service_areas
+      label: Service areas
+      type: string
+      list: true
+  - name: seo
+    label: Global SEO
+    type: object
+    fields:
+    - name: default_social_image
+      label: Default social image
+      type: image
+    - name: twitter_handle
+      label: Twitter/X handle
+      type: string
+    - name: default_author
+      label: Default author
+      type: string
+    - name: default_reviewer
+      label: Default reviewer
+      type: string
+  - name: verification
+    label: Search verification
+    type: object
+    fields:
+    - name: google
+      label: Google verification token
+      type: string
+    - name: bing
+      label: Bing verification token
+      type: string
+    - name: yandex
+      label: Yandex verification token
+      type: string
+  - name: ratings
+    label: Review profiles
+    type: object
+    fields:
+    - name: google_score
+      label: Google score
+      type: string
+    - name: google_url
+      label: Google reviews URL
+      type: string
+    - name: tripadvisor_score
+      label: Tripadvisor score
+      type: string
+    - name: tripadvisor_url
+      label: Tripadvisor reviews URL
+      type: string
+  - name: tawk
+    label: Tawk.to live chat
+    type: object
+    fields:
+    - name: property_id
+      label: Property ID
+      type: string
+    - name: widget_id
+      label: Widget ID
+      type: string
+  - name: performance
+    label: Performance settings
+    type: object
+    fields:
+    - name: web_vitals_endpoint
+      label: Web Vitals endpoint
+      type: string
+    - name: service_worker
+      label: Enable service worker
+      type: boolean
+      default: true
+  - name: ai
+    label: AI/search crawler settings
+    type: object
+    fields:
+    - name: allow_search_crawlers
+      label: Allow AI search crawlers
+      type: boolean
+      default: true
+    - name: allow_model_training
+      label: Allow model-training crawlers
+      type: boolean
+      default: false
+    - name: content_license
+      label: Content license statement
+      type: text
+  - name: navigation
+    label: Homepage service cards (legacy fallback)
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: url
+      label: URL
+      type: string
+  - name: home_faqs
+    label: Global/home FAQs
+    type: object
+    list: true
+    fields:
+    - name: question
+      label: Question
+      type: string
+      required: true
+    - name: answer
+      label: Answer
+      type: rich-text
+      required: true
+  - name: team
+    label: Team members
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: Name
+      type: string
+    - name: role
+      label: Role
+      type: string
+    - name: photo
+      label: Photo
+      type: image
+    - name: bio
+      label: Bio
+      type: text
+    - name: email
+      label: Email
+      type: string
+- name: site_header
+  label: 02 — Header & Top Bar
+  type: file
+  path: src/_data/siteHeader.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: enabled
+    label: Show header
+    type: boolean
+    default: true
+  - name: sticky
+    label: Sticky header
+    type: boolean
+    default: true
+  - name: top_strip
+    label: Top information strip
+    type: object
+    fields:
+    - name: enabled
+      label: Show top strip
+      type: boolean
+      default: true
+    - name: left_text
+      label: Left text
+      type: string
+    - name: show_hours
+      label: Show hours
+      type: boolean
+      default: true
+    - name: hours
+      label: Working hours
+      type: string
+    - name: show_phone
+      label: Show phone
+      type: boolean
+      default: true
+    - name: show_email
+      label: Show email
+      type: boolean
+      default: true
+  - name: brand
+    label: Logo/support row
+    type: object
+    fields:
+    - name: logo_override
+      label: Header logo override
+      type: image
+    - name: logo_alt
+      label: Logo alt text
+      type: string
+    - name: show_support_block
+      label: Show support block
+      type: boolean
+      default: true
+    - name: support_title
+      label: Support title
+      type: string
+    - name: support_subtitle
+      label: Support subtitle
+      type: string
+    - name: support_icon
+      label: Support icon/text
+      type: string
+  - name: search
+    label: Header search
+    type: object
+    fields:
+    - name: enabled
+      label: Show search
+      type: boolean
+      default: true
+    - name: placeholder
+      label: Search placeholder
+      type: string
+    - name: button_label
+      label: Accessible button label
+      type: string
+  - name: language_selector
+    label: Language selector
+    type: object
+    fields:
+    - name: enabled
+      label: Show language selector
+      type: boolean
+      default: true
+    - name: default_label
+      label: Default label
+      type: string
+  - name: primary_cta
+    label: Primary header button
+    type: object
+    fields:
+    - name: enabled
+      label: Show button
+      type: boolean
+      default: true
+    - name: label
+      label: Button label
+      type: string
+    - name: url
+      label: Button URL
+      type: string
+  - name: navigation
+    label: Navigation row
+    type: object
+    fields:
+    - name: enabled
+      label: Show navigation
+      type: boolean
+      default: true
+    - name: mobile_button_label
+      label: Mobile menu button label
+      type: string
+- name: navigation
+  label: 03 — Navbar & Multi-level Menus
+  type: file
+  path: src/_data/menu.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: items
+    label: Menu items (drag to reorder)
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Label
+      type: string
+      required: true
+    - name: url
+      label: URL
+      type: string
+    - name: icon
+      label: Icon/star
+      type: string
+    - name: featured
+      label: Featured style
+      type: boolean
+      default: false
+    - name: enabled
+      label: Visible
+      type: boolean
+      default: true
+    - name: target_blank
+      label: Open in new tab
+      type: boolean
+      default: false
+    - name: children
+      label: Submenu items
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: Label
+        type: string
+        required: true
+      - name: url
+        label: URL
+        type: string
+      - name: icon
+        label: Icon/star
+        type: string
+      - name: featured
+        label: Featured style
+        type: boolean
+        default: false
+      - name: enabled
+        label: Visible
+        type: boolean
+        default: true
+      - name: target_blank
+        label: Open in new tab
+        type: boolean
+        default: false
+      - name: children
+        label: Third-level items
+        type: object
+        list: true
+        fields:
+        - name: label
+          label: Label
+          type: string
+          required: true
+        - name: url
+          label: URL
+          type: string
+        - name: icon
+          label: Icon/star
+          type: string
+        - name: featured
+          label: Featured style
+          type: boolean
+          default: false
+        - name: enabled
+          label: Visible
+          type: boolean
+          default: true
+        - name: target_blank
+          label: Open in new tab
+          type: boolean
+          default: false
+- name: site_footer
+  label: 04 — Footer, Newsletter & Link Columns
+  type: file
+  path: src/_data/siteFooter.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: enabled
+    label: Show footer
+    type: boolean
+    default: true
+  - name: newsletter
+    label: Newsletter
+    type: object
+    fields:
+    - name: enabled
+      label: Show newsletter
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: email_placeholder
+      label: Email placeholder
+      type: string
+    - name: button_label
+      label: Button label
+      type: string
+    - name: fallback_label
+      label: Email fallback label
+      type: string
+  - name: columns
+    label: Footer columns
+    type: object
+    list: true
+    fields:
+    - name: heading
+      label: Column heading
+      type: string
+    - name: links
+      label: Links
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: Label
+        type: string
+        required: true
+      - name: url
+        label: URL
+        type: string
+        required: true
+      - name: target_blank
+        label: Open in new tab
+        type: boolean
+        default: false
+      - name: enabled
+        label: Visible
+        type: boolean
+        default: true
+  - name: contact
+    label: Contact column
+    type: object
+    fields:
+    - name: enabled
+      label: Show contact column
+      type: boolean
+      default: true
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: show_phone
+      label: Show phone
+      type: boolean
+      default: true
+    - name: show_whatsapp
+      label: Show WhatsApp
+      type: boolean
+      default: true
+    - name: show_email
+      label: Show email
+      type: boolean
+      default: true
+    - name: show_address
+      label: Show address
+      type: boolean
+      default: true
+    - name: show_contact_hub
+      label: Show contact hub button
+      type: boolean
+      default: true
+    - name: contact_hub_label
+      label: Contact hub label
+      type: string
+  - name: social
+    label: Social settings
+    type: object
+    fields:
+    - name: enabled
+      label: Show social links
+      type: boolean
+      default: true
+    - name: show_ratings
+      label: Show ratings
+      type: boolean
+      default: true
+    - name: platform_order
+      label: Platform order
+      type: object
+      list: true
+      fields:
+      - name: key
+        label: Site social key
+        type: string
+      - name: label
+        label: Label
+        type: string
+      - name: icon
+        label: Icon name
+        type: string
+  - name: bottom
+    label: Footer bottom bar
+    type: object
+    fields:
+    - name: copyright_template
+      label: Copyright template
+      type: string
+      description: Use {year} and {site} placeholders.
+    - name: links
+      label: Bottom links
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: Label
+        type: string
+        required: true
+      - name: url
+        label: URL
+        type: string
+        required: true
+      - name: target_blank
+        label: Open in new tab
+        type: boolean
+        default: false
+      - name: enabled
+        label: Visible
+        type: boolean
+        default: true
+- name: homepage
+  label: 05 — Homepage Builder & Section Order
+  type: file
+  path: src/_data/homePage.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: hero
+    label: Homepage hero
+    type: object
+    fields:
+    - name: enabled
+      label: Show hero
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: summary
+      label: Summary
+      type: text
+    - name: slides_count
+      label: Number of slides
+      type: number
+      options:
+        min: 1
+        max: 12
+    - name: show_trip_finder
+      label: Show trip finder
+      type: boolean
+      default: true
+  - name: section_order
+    label: Homepage section order
+    type: select
+    list: true
+    options:
+    - proof
+    - services
+    - latest
+    - fixed
+    - destinations
+    - vehicles
+    - trust
+    - guides
+    - resources
+    - faqs
+    - cta
+  - name: proof
+    label: Reviews/trust intro
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+  - name: services
+    label: Service cards
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: cards
+      label: Custom service cards (leave empty for site navigation)
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: url
+        label: URL
+        type: string
+      - name: description
+        label: Description
+        type: text
+  - name: latest
+    label: Latest journeys
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: button_label
+      label: Button label
+      type: string
+    - name: button_url
+      label: Button URL
+      type: string
+    - name: card_count
+      label: Cards to show
+      type: number
+      options:
+        min: 1
+        max: 24
+  - name: fixed
+    label: Fixed departures
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: button_label
+      label: Button label
+      type: string
+    - name: button_url
+      label: Button URL
+      type: string
+    - name: card_count
+      label: Cards to show
+      type: number
+      options:
+        min: 1
+        max: 24
+  - name: destinations
+    label: Destinations
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: button_label
+      label: Button label
+      type: string
+    - name: button_url
+      label: Button URL
+      type: string
+    - name: items
+      label: Destination cards
+      type: object
+      list: true
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: url
+        label: URL
+        type: string
+  - name: vehicles
+    label: Vehicles
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: button_label
+      label: Button label
+      type: string
+    - name: button_url
+      label: Button URL
+      type: string
+    - name: card_count
+      label: Cards to show
+      type: number
+      options:
+        min: 1
+        max: 12
+  - name: trust
+    label: Why choose us
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: items
+      label: Trust points
+      type: object
+      list: true
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+  - name: guides
+    label: Travel guides
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: button_label
+      label: Button label
+      type: string
+    - name: button_url
+      label: Button URL
+      type: string
+    - name: card_count
+      label: Cards to show
+      type: number
+      options:
+        min: 1
+        max: 18
+  - name: resources
+    label: Travel resources
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: button_label
+      label: Button label
+      type: string
+    - name: button_url
+      label: Button URL
+      type: string
+    - name: items
+      label: Resource cards
+      type: object
+      list: true
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: url
+        label: URL
+        type: string
+      - name: link_label
+        label: Link label
+        type: string
+  - name: faqs
+    label: FAQ section
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+  - name: cta
+    label: Final CTA
+    type: object
+    fields:
+    - name: enabled
+      label: Show section
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: button_label
+      label: Button label
+      type: string
+    - name: button_url
+      label: Button URL
+      type: string
+- name: theme
+  label: 06 — Theme Colors, Radius & Spacing
+  type: file
+  path: src/_data/theme.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: primary
+    label: Primary dark color
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: primary_soft
+    label: Secondary dark color
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: accent
+    label: Accent/button color
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: accent_hover
+    label: Accent hover color
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: surface
+    label: Main surface
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: surface_muted
+    label: Muted surface
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: text
+    label: Main text color
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: text_muted
+    label: Muted text color
+    type: string
+    pattern: ^#([0-9A-Fa-f]{6})$
+  - name: header_glass
+    label: Header glass color
+    type: string
+  - name: header_blur_px
+    label: Header blur (px)
+    type: number
+    options:
+      min: 0
+      max: 40
+  - name: border
+    label: Glass border color
+    type: string
+  - name: radius_small_px
+    label: Small radius (px)
+    type: number
+    options:
+      min: 0
+      max: 30
+  - name: radius_card_px
+    label: Card radius (px)
+    type: number
+    options:
+      min: 0
+      max: 50
+  - name: button_radius_px
+    label: Button radius (px)
+    type: number
+    options:
+      min: 0
+      max: 40
+  - name: section_spacing_px
+    label: Section spacing (px)
+    type: number
+    options:
+      min: 24
+      max: 160
+  - name: max_width_px
+    label: Maximum content width (px)
+    type: number
+    options:
+      min: 900
+      max: 1800
+- name: forms
+  label: 07 — Forms, Labels & Required Fields
+  type: file
+  path: src/_data/formsConfig.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: plan_trip
+    label: Plan-a-Trip form
+    type: object
+    fields:
+    - name: enabled
+      label: Show form
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: submit_label
+      label: Submit button label
+      type: string
+    - name: success_message
+      label: Success message
+      type: text
+    - name: fallback_note
+      label: Fallback note
+      type: text
+    - name: fields
+      label: Fields
+      type: object
+      fields:
+      - name: name
+        label: Name field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: email
+        label: Email field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: phone
+        label: Phone/WhatsApp field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: service
+        label: Service field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: journey
+        label: Journey field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: start_date
+        label: Start date field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: end_date
+        label: End date field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: travelers
+        label: Travelers field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: budget
+        label: Budget field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: destination
+        label: Destination field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+      - name: requirements
+        label: Requirements field
+        type: object
+        fields:
+        - name: enabled
+          label: Show field
+          type: boolean
+          default: true
+        - name: required
+          label: Required
+          type: boolean
+          default: false
+        - name: label
+          label: Label
+          type: string
+        - name: placeholder
+          label: Placeholder
+          type: string
+    - name: service_options
+      label: Service dropdown options
+      type: string
+      list: true
+  - name: contact
+    label: Contact form
+    type: object
+    fields:
+    - name: enabled
+      label: Show contact form
+      type: boolean
+      default: true
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: submit_label
+      label: Submit label
+      type: string
+    - name: name_label
+      label: Name label
+      type: string
+    - name: email_label
+      label: Email label
+      type: string
+    - name: message_label
+      label: Message label
+      type: string
+    - name: endpoint_help
+      label: Endpoint help message
+      type: text
+- name: taxonomies
+  label: 08 — Categories, Statuses & Taxonomy Lists
+  type: file
+  path: src/_data/taxonomies.json
+  operations:
+    delete: false
+    rename: false
+  fields:
+  - name: difficulty_levels
+    label: Difficulty levels
+    type: string
+    list: true
+  - name: departure_types
+    label: Departure types
+    type: string
+    list: true
+  - name: service_types
+    label: Service types
+    type: string
+    list: true
+  - name: regions
+    label: Regions/service areas
+    type: string
+    list: true
+  - name: currencies
+    label: Currencies
+    type: string
+    list: true
+  - name: journey_statuses
+    label: Journey statuses
+    type: string
+    list: true

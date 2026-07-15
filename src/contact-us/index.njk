@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+permalink: /contact-us/
+title: Contact Karakoram Vision Pakistan
+summary: Send a booking request or contact our team through the app you prefer.
+seo:
+  title: Contact Karakoram Vision Pakistan | Pakistan Travel Experts
+  description: Contact Karakoram Vision Pakistan for tours, trekking, expeditions, jeep safaris and custom travel planning in Pakistan.
+---
+{% set contactForm = formsConfig.contact %}
+{% set heroItems = collections.journeys | limit(6) %}{% set heroHeading = title %}{% set heroSummary = summary %}{% set heroEyebrow = 'International inquiries' %}{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="mx-auto grid max-w-7xl gap-6 px-4 py-14 md:grid-cols-2">
+  <div class="rounded-2xl border border-blue-100 p-7 shadow-sm"><p class="eyebrow">Email</p><h2 class="mt-2 text-2xl font-black">Direct inquiry</h2><a class="mt-5 block font-bold text-blue-800" href="mailto:{{ site.email }}">{{ site.email }}</a><a class="mt-2 block font-bold text-blue-800" href="mailto:{{ site.booking_email }}">{{ site.booking_email }}</a>{% include "components/contact-channel-buttons.njk" %}</div>
+  <div class="rounded-2xl border border-blue-100 p-7 shadow-sm"><p class="eyebrow">Booking</p><h2 class="mt-2 text-2xl font-black">Trip request form</h2><a class="btn-primary mt-5" href="/plan-a-trip/#trip-request-form">Open complete trip planner</a></div>
+  {% if contactForm.enabled !== false %}<div class="rounded-2xl border border-blue-100 p-7 shadow-sm"><p class="eyebrow">{{ contactForm.eyebrow }}</p><h2 class="mt-2 text-2xl font-black">{{ contactForm.heading }}</h2>{% if site.forms.contact_formspree %}<form class="mt-5 grid gap-4" action="{{ site.forms.contact_formspree }}" method="post"><label class="grid gap-1 font-bold">{{ contactForm.name_label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" name="name" required></label><label class="grid gap-1 font-bold">{{ contactForm.email_label }}<input class="rounded-md border border-slate-300 px-4 py-3 font-normal" type="email" name="email" required></label><label class="grid gap-1 font-bold">{{ contactForm.message_label }}<textarea class="min-h-40 rounded-md border border-slate-300 px-4 py-3 font-normal" name="message" required></textarea></label><button class="btn-primary" type="submit">{{ contactForm.submit_label }}</button></form>{% else %}<p class="mt-4 text-slate-600">{{ contactForm.endpoint_help }}</p>{% endif %}</div>{% endif %}
+  <div class="rounded-2xl border border-blue-100 p-7 shadow-sm"><p class="eyebrow">Messaging apps</p><h2 class="mt-2 text-2xl font-black">Choose your preferred app</h2>{% include "components/contact-channel-buttons.njk" %}</div>
+</section>

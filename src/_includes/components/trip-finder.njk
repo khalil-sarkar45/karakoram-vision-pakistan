@@ -1,0 +1,31 @@
+<form class="bk-trip-finder" action="/search/" method="get" aria-label="Find a Karakoram Vision Pakistan journey">
+  <div class="bk-finder-field">
+    <span class="bk-finder-kicker">What?</span>
+    <label for="trip-type">Journey type</label>
+    <select id="trip-type" name="type">
+      <option value="all">All journeys</option>
+      <option value="tours">Tours</option>
+      <option value="trekking">Trekking</option>
+      <option value="expeditions">Expeditions</option>
+      <option value="jeep-safaris">Jeep Safaris</option>
+      <option value="hunting-services">Licensed Hunting Services</option>
+      <option value="vehicles">Vehicle Rental</option>
+    </select>
+  </div>
+  <div class="bk-finder-dates">
+    <span class="bk-finder-kicker">When?</span>
+    <label for="trip-start">Start date</label>
+    <input id="trip-start" type="date" name="start">
+    <label for="trip-end">End date</label>
+    <input id="trip-end" type="date" name="end">
+  </div>
+  <div class="bk-finder-field">
+    <span class="bk-finder-kicker">Where?</span>
+    <label for="trip-destination">Destination or route</label>
+    <input id="trip-destination" type="search" name="q" list="bk-destinations" placeholder="Hunza, Skardu, K2…" required>
+    <datalist id="bk-destinations">
+      <option value="Hunza"><option value="Skardu"><option value="K2"><option value="Gilgit-Baltistan"><option value="Chitral"><option value="Deosai"><option value="Nanga Parbat"><option value="Karakoram"><option value="Himalaya"><option value="Hindu Kush">
+    </datalist>
+  </div>
+  <button class="bk-finder-submit" type="submit">Search journeys</button>
+</form>

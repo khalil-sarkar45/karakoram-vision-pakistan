@@ -1,0 +1,110 @@
+---
+layout: layouts/base.njk
+---
+{% from "components/icon.njk" import icon %}
+{% set journeyImage = cover_image | safeMedia(cover_source, '/assets/uploads/placeholder.svg') %}
+{% set journeyGallery = gallery or [] %}
+<nav aria-label="Breadcrumb" class="bk-trip-breadcrumb"><ol><li><a href="/">Home</a></li><li aria-hidden="true">/</li><li><a href="/{{ service_type }}/">{{ service_label }}</a></li><li aria-hidden="true">/</li><li aria-current="page">{{ title }}</li></ol></nav>
+
+<section class="bk-trip-showcase" data-trip-gallery>
+  <div class="bk-trip-gallery-shell">
+    <button type="button" class="bk-trip-main-image" data-trip-main-button aria-label="Open {{ title }} image gallery">
+      <img data-trip-main-image src="{{ journeyImage }}" alt="{{ title }}" width="1400" height="930" fetchpriority="high" decoding="async">
+      <span class="bk-trip-gallery-count">Gallery · {{ (journeyGallery.length or 0) + 1 }} images</span>
+    </button>
+    {% if journeyGallery and journeyGallery.length %}
+    <div class="bk-trip-thumbnails" aria-label="{{ title }} gallery thumbnails">
+      <button type="button" class="is-active" data-trip-thumb data-full="{{ journeyImage }}" data-alt="{{ title }}"><img src="{{ journeyImage }}" alt="{{ title }} thumbnail" width="180" height="120" loading="lazy" decoding="async"></button>
+      {% for image in journeyGallery | limit(5) %}
+        {% set gallerySrc = (image.image or image.src or image) | safeMedia('', '/assets/uploads/placeholder.svg') %}
+        {% set galleryAlt = image.alt or (title + ' gallery image ' + loop.index) %}
+        <button type="button" data-trip-thumb data-full="{{ gallerySrc }}" data-alt="{{ galleryAlt }}"><img src="{{ gallerySrc }}" alt="{{ galleryAlt }}" width="180" height="120" loading="lazy" decoding="async"></button>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <aside class="bk-trip-summary-card">
+    <p class="eyebrow">{{ service_label }}</p>
+    <h1>{{ title }}</h1>
+    {% if destination %}<p class="bk-trip-destination">{{ icon('map') }} {{ destination }}</p>{% endif %}
+    {% if summary %}<p class="bk-trip-summary">{{ summary }}</p>{% endif %}
+    <div class="bk-trip-facts">
+      {% if duration %}<div>{{ icon('calendar') }}<span><small>Duration</small><strong>{{ duration }}</strong></span></div>{% endif %}
+      {% if group_size %}<div>{{ icon('group') }}<span><small>Group size</small><strong>{{ group_size }}</strong></span></div>{% endif %}
+      {% if price_from %}<div>{{ icon('price') }}<span><small>Price from</small><strong>{{ price_from }}</strong></span></div>{% endif %}
+      {% if deposit %}<div>{{ icon('price') }}<span><small>Deposit</small><strong>{{ deposit }}</strong></span></div>{% endif %}
+      {% if difficulty %}<div><span class="bk-trip-difficulty-dot"></span><span><small>Difficulty</small><strong>{{ difficulty }}</strong></span></div>{% endif %}
+      {% if trip_status %}<div><span class="bk-trip-status-dot"></span><span><small>Status</small><strong>{{ trip_status }}</strong></span></div>{% endif %}
+    </div>
+    {% if tags and tags.length %}<div class="bk-trip-tags">{% for tag in tags %}<span>{{ tag }}</span>{% endfor %}</div>{% elseif categories and categories.length %}<div class="bk-trip-tags">{% for tag in categories %}<span>{{ tag }}</span>{% endfor %}</div>{% endif %}
+    <a class="bk-trip-inquiry-primary" href="/plan-a-trip/?journey={{ title | urlencode }}&service={{ service_type | urlencode }}#trip-request-form">Send Inquiry</a>
+    {% include "components/contact-channel-buttons.njk" %}
+    <div class="bk-trip-tools">
+      {% if route_map_url %}<a href="{{ route_map_url }}" target="_blank" rel="noopener">{{ icon('map') }} Route map</a>{% endif %}
+      <button type="button" data-share-trip data-share-title="{{ title }}">{{ icon('share') }} Share</button>
+      <button type="button" data-print-trip>{{ icon('print') }} Print</button>
+    </div>
+  </aside>
+
+  <div class="bk-trip-lightbox" data-trip-lightbox hidden role="dialog" aria-modal="true" aria-label="{{ title }} image gallery">
+    <button type="button" data-trip-lightbox-close class="bk-trip-lightbox-close" aria-label="Close gallery">×</button>
+    <button type="button" data-trip-lightbox-prev class="bk-trip-lightbox-prev" aria-label="Previous image">←</button>
+    <img data-trip-lightbox-image src="{{ journeyImage }}" alt="{{ title }}" width="1800" height="1200">
+    <button type="button" data-trip-lightbox-next class="bk-trip-lightbox-next" aria-label="Next image">→</button>
+  </div>
+</section>
+
+<nav class="bk-trip-section-nav" data-trip-section-nav aria-label="Journey page sections">
+  <a href="#overview">Overview</a>
+  {% if departure_details and departure_details.length or departures and departures.length %}<a href="#dates-prices">Dates & prices</a>{% endif %}
+  {% if highlights and highlights.length %}<a href="#highlights">Highlights</a>{% endif %}
+  <a href="#trip-details">Trip details</a>
+  {% if included and included.length or excluded and excluded.length %}<a href="#included">Included</a>{% endif %}
+  {% if packing_list and packing_list.length %}<a href="#packing">Packing</a>{% endif %}
+  {% if trip_leader %}<a href="#trip-leader">Trip leader</a>{% endif %}
+  {% if faqs and faqs.length %}<a href="#faqs">FAQs</a>{% endif %}
+  {% if reviews and reviews.length %}<a href="#reviews">Reviews</a>{% endif %}
+  <a href="/plan-a-trip/?journey={{ title | urlencode }}#trip-request-form" class="bk-trip-section-inquire">Inquire now</a>
+</nav>
+
+<div class="bk-trip-page-shell">
+  <main class="bk-trip-content">
+    <section id="overview" class="bk-trip-content-section">
+      <p class="eyebrow">Journey overview</p>
+      <h2>{{ title }}</h2>
+      {% include "components/answer-block.njk" %}
+      {% if summary %}<p class="bk-trip-lead">{{ summary }}</p>{% endif %}
+    </section>
+
+    {% if departure_details and departure_details.length %}
+    <section id="dates-prices" class="bk-trip-content-section">
+      <div class="bk-trip-section-heading"><div><p class="eyebrow">Scheduled departures</p><h2>Dates, availability and prices</h2></div><a href="/trip-calendar/">View complete calendar</a></div>
+      <div class="bk-departure-table-wrap"><table class="bk-departure-table"><thead><tr><th>Dates</th><th>Status</th><th>Places</th><th>Deposit</th><th>Full price</th><th></th></tr></thead><tbody>
+        {% for departure in departure_details %}<tr><td><strong>{{ departure.dates or departure.date }}</strong>{% if departure.note %}<small>{{ departure.note }}</small>{% endif %}</td><td><span class="bk-departure-status">{{ departure.status or 'Ask us' }}</span></td><td>{{ departure.places or 'On request' }}</td><td>{{ departure.deposit or deposit or 'Ask us' }}</td><td><strong>{{ departure.price or price_from or 'Ask us' }}</strong></td><td><a href="/plan-a-trip/?journey={{ title | urlencode }}&start={{ (departure.dates or departure.date) | urlencode }}#trip-request-form">Inquire</a></td></tr>{% endfor %}
+      </tbody></table></div>
+    </section>
+    {% elseif departures and departures.length %}
+    <section id="dates-prices" class="bk-trip-content-section"><div class="bk-trip-section-heading"><div><p class="eyebrow">Scheduled departures</p><h2>Upcoming dates</h2></div><a href="/trip-calendar/">View complete calendar</a></div><div class="bk-simple-departures">{% for departure in departures %}<a href="/plan-a-trip/?journey={{ title | urlencode }}&start={{ departure | urlencode }}#trip-request-form">{{ departure }}<span>Request availability</span></a>{% endfor %}</div></section>
+    {% endif %}
+
+    {% if highlights and highlights.length %}<section id="highlights" class="bk-trip-content-section"><p class="eyebrow">Why this journey</p><h2>Trip highlights</h2><div class="bk-highlight-grid">{% for highlight in highlights %}<article><span>{{ loop.index }}</span><p>{{ highlight }}</p></article>{% endfor %}</div></section>{% endif %}
+
+    <section id="trip-details" class="bk-trip-content-section"><p class="eyebrow">Complete information</p><h2>Trip details and itinerary</h2><article x-data="contentEnhancer" class="prose-clean">{{ content | safe }}</article></section>
+
+    {% if included and included.length or excluded and excluded.length %}<section id="included" class="bk-trip-content-section"><p class="eyebrow">What to expect</p><h2>Included and excluded</h2><div class="bk-inclusion-grid">{% if included and included.length %}<article><h3>Included</h3><ul>{% for item in included %}<li>{{ item }}</li>{% endfor %}</ul></article>{% endif %}{% if excluded and excluded.length %}<article><h3>Not included</h3><ul>{% for item in excluded %}<li>{{ item }}</li>{% endfor %}</ul></article>{% endif %}</div></section>{% endif %}
+
+    {% if packing_list and packing_list.length %}<section id="packing" class="bk-trip-content-section"><p class="eyebrow">Trip preparation</p><h2>Packing list</h2><ul class="bk-packing-list">{% for item in packing_list %}<li>{{ item }}</li>{% endfor %}</ul><a href="/travel-resources/" class="bk-text-link">Read all travel preparation resources →</a></section>{% endif %}
+
+    {% if trip_leader %}<section id="trip-leader" class="bk-trip-content-section"><p class="eyebrow">Meet your expert</p><h2>Trip leader</h2><article class="bk-trip-leader-card">{% if trip_leader.image %}<img src="{{ trip_leader.image | safeMedia('', '/assets/uploads/placeholder.svg') }}" alt="{{ trip_leader.name or 'Karakoram Vision Pakistan trip leader' }}" width="320" height="320" loading="lazy" decoding="async">{% endif %}<div><h3>{{ trip_leader.name or 'Karakoram Vision Travel Team' }}</h3>{% if trip_leader.role %}<strong>{{ trip_leader.role }}</strong>{% endif %}{% if trip_leader.bio %}<p>{{ trip_leader.bio }}</p>{% endif %}</div></article></section>{% endif %}
+
+    {% if faqs and faqs.length %}<section id="faqs" class="bk-trip-content-section">{% include "components/faq-block.njk" %}</section>{% endif %}
+
+    {% if reviews and reviews.length %}<section id="reviews" class="bk-trip-content-section"><p class="eyebrow">Traveller feedback</p><h2>Guest reviews</h2><div class="bk-trip-reviews">{% for review in reviews %}<blockquote><p>“{{ review.quote or review.text }}”</p><footer><strong>{{ review.name or 'Verified traveller' }}</strong>{% if review.country %}<span>{{ review.country }}</span>{% endif %}{% if review.rating %}<span aria-label="{{ review.rating }} out of 5 stars">★ {{ review.rating }}/5</span>{% endif %}</footer></blockquote>{% endfor %}</div></section>{% endif %}
+
+    {% include "components/trust-block.njk" %}
+  </main>
+  <aside class="bk-trip-sticky-inquiry"><p class="eyebrow">Start planning</p><h2>Have a question?</h2><p>Share your dates, group size and preferred experience. No login is required.</p>{% include "components/contact-buttons.njk" %}{% if service_type == 'hunting-services' %}<p class="bk-compliance-note"><strong>Compliance:</strong> Services are subject to official permits, quotas, seasons and wildlife rules. No permit is guaranteed.</p>{% endif %}</aside>
+</div>
+
+{% if journeyGallery and journeyGallery.length %}<section class="bk-full-gallery" aria-labelledby="full-gallery-heading"><div class="bk-trip-section-heading"><div><p class="eyebrow">Gallery</p><h2 id="full-gallery-heading">Journey images</h2></div></div><div>{% for image in journeyGallery %}{% set gallerySrc = (image.image or image.src or image) | safeMedia('', '/assets/uploads/placeholder.svg') %}<button type="button" data-trip-gallery-open data-full="{{ gallerySrc }}" data-alt="{{ image.alt or (title + ' gallery image ' + loop.index) }}"><img src="{{ gallerySrc }}" alt="{{ image.alt or (title + ' gallery image ' + loop.index) }}" width="800" height="600" loading="lazy" decoding="async"></button>{% endfor %}</div></section>{% endif %}

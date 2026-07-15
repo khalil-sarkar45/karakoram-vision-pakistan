@@ -1,0 +1,1 @@
+export function onRequestGet({request}){const u=new URL(request.url);return Response.json({status:"ok",service:"Karakoram Vision Pakistan",runtime:"Cloudflare Pages Functions",host:u.host,timestamp:new Date().toISOString()},{headers:{"cache-control":"no-store","x-content-type-options":"nosniff"}})}

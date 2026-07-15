@@ -1,0 +1,5 @@
+---
+permalink: /manifest.webmanifest
+eleventyExcludeFromCollections: true
+---
+{"name":{{ site.name | json | safe }},"short_name":"Karakoram Vision Pakistan","description":{{ site.description | json | safe }},"start_url":"/","display":"standalone","background_color":"#ffffff","theme_color":"#062b69","icons":[{"src":{{ site.favicon | json | safe }},"sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}

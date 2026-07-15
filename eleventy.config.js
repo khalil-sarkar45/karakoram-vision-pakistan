@@ -1,0 +1,71 @@
+export default function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({"src/assets":"assets"});
+  eleventyConfig.addPassthroughCopy({"src/_headers":"_headers"});
+  eleventyConfig.addPassthroughCopy({"src/_redirects":"_redirects"});
+  eleventyConfig.addPassthroughCopy({"src/sw.js":"sw.js"});
+  const published = x => x.data.published !== false;
+  const coll = (api, folder) => api.getFilteredByGlob(`src/content/${folder}/*.md`).filter(published);
+  eleventyConfig.addCollection("tours", api => coll(api,"tours"));
+  eleventyConfig.addCollection("trekking", api => coll(api,"trekking"));
+  eleventyConfig.addCollection("expeditions", api => coll(api,"expeditions"));
+  eleventyConfig.addCollection("jeepSafaris", api => coll(api,"jeep-safaris"));
+  eleventyConfig.addCollection("huntingServices", api => coll(api,"hunting-services"));
+  eleventyConfig.addCollection("journeys", api => ["tours","trekking","expeditions","jeep-safaris","hunting-services"].flatMap(x=>coll(api,x)));
+  eleventyConfig.addCollection("posts", api => coll(api,"blog"));
+  eleventyConfig.addCollection("vehicles", api => coll(api,"vehicles"));
+  eleventyConfig.addCollection("pages", api => coll(api,"pages"));
+  eleventyConfig.addCollection("indexable", api => api.getAll().filter(x => x.data.published !== false && x.url && !(String((x.data.seo || {}).robots || "").toLowerCase().includes("noindex")) && x.url !== "/404.html"));
+  eleventyConfig.addFilter("json", v => JSON.stringify(v));
+  eleventyConfig.addFilter("limit", (arr,n) => (arr || []).slice(0,n));
+  eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  eleventyConfig.addFilter("isoDate", value => { if(!value)return ""; const d=value instanceof Date?value:new Date(value); return Number.isNaN(d.getTime())?"":d.toISOString(); });
+  eleventyConfig.addFilter("absoluteUrl", (value,base) => { const v=String(value||"").trim(); if(!v)return ""; if(/^https?:\/\//i.test(v))return v; return String(base||"").replace(/\/$/,"")+"/"+v.replace(/^\//,""); });
+  eleventyConfig.addFilter("stripHtml", value => String(value||"").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim());
+  eleventyConfig.addFilter("urlencode", value => encodeURIComponent(String(value || "")));
+  eleventyConfig.addFilter("keywordItems", (arr, keywords) => {
+    const terms = String(keywords || "").split(",").map(x => x.trim().toLowerCase()).filter(Boolean);
+    if (!terms.length) return arr || [];
+    return (arr || []).filter(item => {
+      const data = item?.data || {};
+      const haystack = [data.title, data.summary, data.destination, data.service_label, ...(data.categories || [])].filter(Boolean).join(" ").toLowerCase();
+      return terms.some(term => haystack.includes(term));
+    });
+  });
+  eleventyConfig.addFilter("safeMedia", (localValue,legacyValue,fallback="/assets/uploads/placeholder.svg") => {
+    const local=String(localValue||"").trim();
+    const legacy=String(legacyValue||"").trim();
+    const allowed=value => value && !/apricottours\.pk/i.test(value) && !/apricot[-_ ]?tours/i.test(value) && !/beyondkarakoram\.com/i.test(value) && !/beyond[-_ ]?karakoram/i.test(value);
+    if(allowed(local)) return local;
+    if(allowed(legacy)) return legacy;
+    return fallback;
+  });
+  eleventyConfig.addTransform("production-html-integrity", function(content, outputPath) {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    const humanizeImageName = src => {
+      try { const file=decodeURIComponent(String(src||"").split("?")[0].split("/").pop()||""); const stem=file.replace(/\.[a-z0-9]+$/i,"").replace(/-\d+x\d+$/i,""); const words=stem.replace(/[_-]+/g," ").replace(/\b(?:img|image|dsc|photo)\b/gi," ").replace(/\s+/g," ").trim(); return words?words.replace(/\b\w/g,c=>c.toUpperCase()):"Karakoram Vision Pakistan travel image"; } catch { return "Karakoram Vision Pakistan travel image"; }
+    };
+    content = content.replace(/Apricot\s+Tours/gi,"Karakoram Vision Pakistan");
+    content = content.replace(/(<img\b[^>]*\bsrc=["'])https?:\/\/(?:www\.)?apricottours\.pk\/[^"']*(["'])/gi,"$1/assets/uploads/placeholder.svg$2");
+    content = content.replace(/\s+srcset=["'][^"']*apricottours\.pk[^"']*["']/gi,"");
+    content = content.replace(/<img\b[^>]*>/gi, tag => {
+      const src=(tag.match(/\bsrc=["']([^"']+)["']/i)||[])[1]||""; const isPriority=/\bfetchpriority=["']high["']/i.test(tag); const altMatch=tag.match(/\balt\s*=\s*(?:["']([^"']*)["']|([^\s>]+))/i); const generatedAlt=humanizeImageName(src).replace(/"/g,'&quot;');
+      if(!altMatch)tag=tag.replace(/<img\b/i,`<img alt="${generatedAlt}"`); else if(!String(altMatch[1]||altMatch[2]||"").trim())tag=tag.replace(/\balt\s*=\s*(?:["'][^"']*["']|[^\s>]+)/i,`alt="${generatedAlt}"`);
+      if(!/\bwidth=["']?\d+/i.test(tag))tag=tag.replace(/<img\b/i,'<img width="1200"');
+      if(!/\bheight=["']?\d+/i.test(tag))tag=tag.replace(/<img\b/i,'<img height="800"');
+      if(!/\bdecoding=/i.test(tag))tag=tag.replace(/<img\b/i,'<img decoding="async"');
+      if(!isPriority&&!/\bloading=/i.test(tag))tag=tag.replace(/<img\b/i,'<img loading="lazy"');
+      return tag;
+    });
+    content=content.replace(/<a\b([^>]*\btarget=["']_blank["'][^>]*)>/gi,(m,attrs)=>/\brel=/i.test(attrs)?m:`<a${attrs} rel="noopener noreferrer">`);
+    return content;
+  });
+  eleventyConfig.addFilter("serviceCollection", (collections,type) => { const map={"tours":"tours","trekking":"trekking","expeditions":"expeditions","jeep-safaris":"jeepSafaris","hunting-services":"huntingServices"}; return collections[map[type]]||[]; });
+  eleventyConfig.addFilter("catalogFilter", (arr,type,filter,query="") => {
+    const normalize=value=>String(value||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").replace(/\s+/g," ").trim();
+    const q=normalize(query), words=q.split(" ").filter(Boolean);
+    const matchesFilter=item=>{ if(!filter)return true; if(filter==="fixed-departures")return !!item.fixed_departure; if(filter==="best-sellers")return !!item.best_seller; if(filter==="k2-treks")return !!item.k2_trek; if(filter==="cultural-tours")return !!item.cultural_tour; if(filter==="8000m-peaks")return !!item.peak_8000m; return true; };
+    const score=item=>{ if(!q)return 1; const hay=normalize([item.normalized_title,item.normalized_slug,item.normalized_tags,item.normalized_destination,item.normalized_summary].join(" ")); if(!words.every(word=>hay.includes(word)))return 0; let n=10; if(item.normalized_title===q)n+=1200; else if(item.normalized_title?.startsWith(q))n+=900; else if(item.normalized_title?.includes(q))n+=700; if(item.normalized_slug?.includes(q))n+=480; if(item.normalized_tags?.includes(q))n+=360; if(item.normalized_destination?.includes(q))n+=260; return n; };
+    return (arr||[]).filter(item=>(!type||type==="all"||item.data?.service_type===type)&&matchesFilter(item)).map(item=>({item,score:score(item)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||String(a.item.data?.title||"").localeCompare(String(b.item.data?.title||""))).map(x=>x.item);
+  });
+  return {dir:{input:"src",includes:"_includes",data:"_data",output:"_site"},markdownTemplateEngine:"njk",htmlTemplateEngine:"njk"};
+}

@@ -1,0 +1,17 @@
+{% if author or reviewed_by or last_verified or sources %}
+<section class="trust-block cv-auto" aria-labelledby="trust-heading">
+  <p class="eyebrow">Editorial integrity</p>
+  <h2 id="trust-heading" class="mt-2 text-2xl font-black">Who prepared and checked this page</h2>
+  <dl class="mt-5 grid gap-4 sm:grid-cols-3">
+    {% if author %}<div><dt>Prepared by</dt><dd>{{ author }}</dd></div>{% endif %}
+    {% if reviewed_by %}<div><dt>Reviewed by</dt><dd>{{ reviewed_by }}</dd></div>{% endif %}
+    {% if last_verified %}<div><dt>Last verified</dt><dd><time datetime="{{ last_verified | isoDate }}">{{ last_verified }}</time></dd></div>{% endif %}
+  </dl>
+  {% if sources and sources.length %}
+  <h3 class="mt-6 text-lg font-black">Sources and references</h3>
+  <ul class="mt-3 space-y-2">
+    {% for source_item in sources %}<li><a href="{{ source_item.url }}" rel="noopener noreferrer" class="font-semibold text-blue-800 underline underline-offset-4">{{ source_item.label or source_item.url }}</a></li>{% endfor %}
+  </ul>
+  {% endif %}
+</section>
+{% endif %}

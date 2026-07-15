@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+permalink: /blog/
+title: Travel Guides
+summary: Destination research, practical travel information, culture, food, safety and route inspiration.
+seo:
+  title: Pakistan Travel Guides & Destination Information | Karakoram Vision Pakistan
+  description: Read destination guides, route ideas, cultural information and practical travel advice for Pakistan and the mountain regions.
+---
+{% set heroItems = collections.posts | limit(6) %}
+{% set heroHeading = title %}
+{% set heroSummary = summary %}
+{% set heroEyebrow = 'Knowledge for better journeys' %}
+{% set heroCompact = true %}
+{% include "components/landing-hero.njk" %}
+<section class="bk-catalog-shell"><header class="bk-section-heading"><div><p class="eyebrow">Plan with context</p><h2>Latest travel guides</h2><p>Use these articles to research destinations before requesting a tailored trip.</p></div><span class="bk-count-pill">{{ collections.posts.length }} guides</span></header><div class="bk-card-grid">{% for item in collections.posts | limit(24) %}{% include "components/post-card.njk" %}{% endfor %}</div></section>

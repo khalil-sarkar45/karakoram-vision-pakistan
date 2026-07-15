@@ -1,0 +1,13 @@
+node_modules/
+_site/
+.wrangler/
+.dev.vars
+.env
+.env.*
+.asset-venv/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+RUNTIME_CATALOG_REPORT.json
+*_REPORT.json

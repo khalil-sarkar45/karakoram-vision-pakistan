@@ -1,0 +1,1 @@
+import {mkdir,copyFile} from "node:fs/promises"; await mkdir("src/assets/vendor",{recursive:true}); await copyFile("node_modules/htmx.org/dist/htmx.min.js","src/assets/vendor/htmx.min.js"); await copyFile("node_modules/alpinejs/dist/cdn.min.js","src/assets/vendor/alpine.min.js");
