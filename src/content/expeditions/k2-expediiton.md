@@ -1,0 +1,104 @@
+---
+title: K2 Expedition
+slug: k2-expediiton
+permalink: /expeditions/k2-expedition/
+layout: layouts/journey.njk
+service_type: expeditions
+service_label: Expeditions
+published: true
+featured: true
+best_seller: true
+fixed_departure: true
+departure_type: Custom
+trip_status: Available
+summary: >-
+  A K2 expedition is a 45 to 60-day high-altitude mountaineering journey to the summit of K2 (8,611
+  meters), the second-highest and one of the most technically demanding peaks in the world. Lets
+  climb K2 with Karakoram Vision Pakistan.
+answer_summary: >-
+  A K2 expedition is a 45 to 60-day high-altitude mountaineering journey to the summit of K2 (8,611
+  meters), the second-highest and one of the most technically demanding peaks in the world. Lets
+  climb K2 with Karakoram Vision Pakistan.
+cover_image: ""
+cover_image_alt: ""
+gallery: []
+duration: "60"
+duration_days: 60
+price_from: ""
+deposit: Advance 50%
+price_currency: USD
+group_size: Minimum 04 PAX
+difficulty: Challenging
+destination: Mount K2
+categories:
+  - Expedition
+  - Climbing
+tags:
+  - K2
+  - 8000m
+  - Expedition
+  - Climbing
+  - Karakoram
+  - Baltoro
+  - Concordia
+  - Pakistan
+  - Baltistan
+  - Shigar
+  - Skardu
+departures: []
+departure_details: []
+highlights:
+  - "Small villages, Rivers, Glaciers, Mountains, Concordia, "
+  - Baltoro Glacier
+  - Gasherbrum-IV
+  - Broad Peak
+  - Snow Doom peak
+  - Mitre Peak
+  - Mashabrum Peak
+  - "Mustagh Tower "
+included:
+  - Airport Pick/Drop
+  - "Hotel bed & Breakfast for 3 nights in Islamabad and in Skardu "
+  - Trekking meals
+  - "Base Camp Logistic Services "
+  - Climbing Permit
+  - Invitation Letter
+  - "Carpeted dinning with Chairs & Tables "
+  - "Generator at the base camp for electricity  "
+  - "Shower tent at the base camp "
+  - Kitchen tent with Crockery
+excluded:
+  - International flight ticket
+  - Insurance
+  - Emergency Equation (Helicopter Rescue and its advance deposit of 7000 $
+  - "Oxygen, EPI Gas, "
+  - "Any kind of climbing gears "
+  - "No any services above base camp "
+  - Any kind of Tips
+packing_list:
+  - Packaging list is given on our website
+route_map_url: ""
+trip_leader:
+  name: ""
+  role: ""
+  image: ""
+  bio: ""
+reviews: []
+faqs: []
+key_facts: []
+author: Karakoram Vision Pakistan office Team
+reviewed_by: "Karakoram Vision Pakistan Field Staff "
+last_verified: "2026-09-15"
+sources: []
+seo:
+  title: K2 Expedition
+  description: >-
+    A K2 expedition is a 45 to 60-day high-altitude mountaineering journey to the summit of K2
+    (8,611 meters), the second-highest and one of the most technically demanding peaks in the world.
+    Lets climb K2 with Karakoram Vision Pakistan.
+  keywords: K2, Broad-Peak, Baltoro, Karakoram, Climb-K2, K2 Expedition 2027, Climb  in Pakistan
+  robots: K2, Expedition, Climbing, Expedition
+body: ""
+---
+
+<p><strong>Fact &amp; Figures:</strong><br>Duration of Expedition: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 60 Days Islamabad to Islamabad<br>Hotel Nights:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 06 Nights&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Camping Nights:&nbsp; &nbsp; &nbsp; 14 Nights<br>Days for Climbing:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 40 Days&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Group Size: 04+ &nbsp; &nbsp; Best Time:&nbsp; &nbsp; &nbsp; &nbsp; 15 June to 15 August<br>Type of Expedition:&nbsp; Unguided (services up to base camp only)</p><p></p><p>K2 is located on the border of Pakistan and China. Being the second highest mountain in the world, it is thought by many climbers to be the ultimate climbing challenge. The giant Pyramid Peak towers in isolation 12,000 feet above the wide Concordia glacial field at the head of the Baltoro Glacier.</p><p>The sheer icy summit is flanked by six equally steep ridges. Each of its faces presents a maze of precipices and overhangs. K2 was long considered to be impossible to climb. Attempts in 1902, 1909, 1934, 1938, 1939 and 1953 had all but failed.</p><p></p><p><strong>K2 EXPEDITION PROGRAM</strong></p><p> <strong>Days</strong> <strong>Description</strong> <strong>Overnight Stay</strong> 01 <strong>Arrive Islamabad and transfer to hotel</strong> Hotel 02</p><p><strong>Fly to Skardu/ Chilas</strong></p><p> a) Fly to Skardu PK-451. (Flight is subject to weather). Upon arrival transfer to hotel for overnight.<br>b) In case of cancellation of flight (11-12 hrs) drive by coach to Chilas (480 km) on Karakoram Highway. Overnight at hotel Hotel 03</p><p><strong>Rest day in Skardu or drive to Skardu</strong></p><p> a) Day free at Skardu<br>b) If you are driving, complete road journey (08–09 hrs) to Skardu (275 km) En-route has good view of Nanga Parbat (8125m) at junction of Indus River and the rapids and fall of Indus River. Overnight at hotel Hotel 04</p><p><strong>Drive to Askoli (3000m)</strong></p><p> By jeeps drive to Askole (6-7 hrs). The last village of about 80 houses. The villagers grow their own cereals, vegetable and fruit and own large herds of sheep's, goats, yaks. Overnight in tent Camping 05</p><p><strong>Trek to Jhola camp (3200m)</strong></p><p> Start 2-3 hours, walk across wasteland and traverse Biafo Glacier, a tortured Ocean of moving boulders and crevasses 2 km wide. Cross the glacier and after a lunch break continue to Jhola (4-5 hrs). Cross-Dumurdo River Bridge and camp at the&nbsp; campsite surrounded by a few bushes with a side stream. Overnight in tent Camping 06</p><p><strong>Trek to Paiju (3600m)</strong></p><p> Start on a relatively easy trail for 3-4 hrs. Crossing Bardumal campsites along a 2-km stretch of sandy River beach. After a lunch break continue towards Paiju for another 2-3 hrs. trail climbs to a Vantage Point providing view of the Snout of Baltoro. And in the far distance a magnificent Panorama of Cathedral Towers and triangle of K2 to the left for the first time. Paiju is a crowded campsite. Overnight in tent. Camping 07</p><p><strong>Rest day in Paiju (3600m)</strong></p><p> Traditional rest day at Paiju for local exploration and its needs of the low porters for their food preparation etc.&nbsp; Overnight at tent. Camping 08</p><p><strong>Trek to Urdokas. (4200m)</strong></p><p> Start for a 7-8 hrs. Gradual climb up Baltoro Glacier on the southern edge. After about two hours the path divides at the snout of Baltoro glacier where the left branch goes to the BC of Trango Tower and the Sarpo Lago pass. Continue to the right climbing up on to the glacier that stretches up the valley 62 km long and 2 km wide. Further 2-3 hours steady climb on a long diagonal to the other side. Follow the southern edge to Liliwa and onward to Khuburtze lovely walks for about 90 minutes to the campsite and with clear water. 4-5 hours lovely walk mostly along the crest of lateral moraine with stunning views of Paiyu Peak, Chorichi, Uli Biaho, Trango Towers and so on. Urdukas is a spectacular campsite. However like Paiyu this site is over used and polluted. Overnight at tent. Camping 09</p><p><strong>Trek to Goro II (4500m)</strong></p><p> 5-6 hours walk on the glacier. The first hour walk is across difficult side crevasses, however the way is smoother and easy in the center. Continue for 2-3 hours to Goro-I opposite of Yermanendo Glacier falling down from the Mashebrum pass. For the next 2-3 hrs continue east up the Baltoro glacier. Following telephone wire from army HQ Goro to Gasherbrum IV. Goro-II campsite is pitched on the rough stones and ice in the center of the glacier with water from the glacier melt. Overnight at tent. Camping 10</p><p><strong>Trek to Broad Peak BC (4900m)</strong></p><p> 4-5 hours slightly easy walk, with spectacular views and gigantic mountain panorama, including Muztagh Tower, Gasherbrum IV, Mitre Peak and the mighty K-2. Camp at Concordia named by Martin Conway after the place De La Concordia in Paris. Lunch at Concordia. You will be meeting some crevasses near Godwin Austin glacier. Overnight at tent. Camping 11&nbsp;</p><p><strong>Trek to Base Camp. (5000m)</strong></p><p>Base Camp at 5000m at Godwin Austin glacier</p><p>Camping 12 - 52</p><p><strong>40 days climbing</strong></p><p>1st camp at 6000m (Approx.) <br>2nd camp at 6700m (Approx.)<br>3rd camp at 7400m (Approx.)</p><p>4th&nbsp;&nbsp; camp at 8000m (Approx)<br>Summit at 8611m</p><p>Camping 53 - 56 4 days for return back to Askoli via same route Camping 57</p><p>Drive back to Skardu</p><p>Hotel 58 Fly&nbsp; to Islamabad Hotel 59 Debriefing&nbsp; in Islamabad Hotel 60</p><p>Transfer to airport for your own destination</p>
