@@ -5,8 +5,8 @@ permalink: /expeditions/broad-peak-expedition/
 published: true
 featured: true
 best_seller: true
-fixed_departure: false
-departure_type: Private
+fixed_departure: true
+departure_type: Custom
 trip_status: Available
 summary: >-
   A full Broad Peak expedition framework with Pakistan permit support, Baltoro approach, base-camp
@@ -21,16 +21,20 @@ duration: 45 Days
 price_from: On request
 deposit: Confirmed with proposal
 price_currency: USD
-group_size: Expedition team
-difficulty: Expedition
-destination: Baltoro & Broad Peak
+group_size: Minimum 4 PAX
+difficulty: Challenging
+destination: Baltoro Broad Peak
 categories:
   - Expeditions
 tags:
   - Broad Peak
   - 8000m
-  - expedition
+  - Expedition
   - Baltoro
+  - "K2 "
+  - Concordia
+  - visitinpakistan
+  - karakoram
 departures: []
 departure_details: []
 highlights:
@@ -42,18 +46,24 @@ included:
   - Private or shared ground transport according to the itinerary
   - Accommodation stated in the confirmed proposal
   - Experienced local coordination and route support
-  - Breakfast and selected meals as confirmed
-  - Permit and entry coordination where applicable
+  - Bed & Breakfast in the hotels and lunch, Dinner during the trek and at the base camp
+  - All logistics up to base camp only
+  - "CKNP and Climbing Permit Fee, Laison Officer Expense "
+  - Invitation letter for Mountaineering E-Visa for Pakistan
+  - Airport Pick and drop
 excluded:
-  - International and domestic flights unless listed
-  - Travel insurance and emergency evacuation cover
-  - Personal equipment, tips and optional activities
+  - "International flight, Visa Fee "
+  - >-
+    Travel insurance and emergency evacuation cover, Askari Aviation advance deposit of 7000 $
+    (refundable)
+  - "Any kind of climbing  & Personal gears, tips for porters, drivers, and staffs "
   - Services not listed in the final confirmed proposal
 packing_list:
   - Layered clothing suitable for the route
   - Comfortable walking or trekking footwear
   - Sun protection and refillable water bottle
   - Personal medication and travel documents
+  - Complete packing list is given on our website
 faqs:
   - question: Can this journey be customized?
     answer: >-
@@ -73,9 +83,9 @@ key_facts:
     value: Skardu, Gilgit-Baltistan
   - label: Availability
     value: Private dates on request
-author: Karakoram Vision Editorial Team
-reviewed_by: Karakoram Vision Travel Team
-last_verified: "2026-07-14"
+author: Karakoram Vision Pakistan Editorial Team
+reviewed_by: Karakoram Vision Pakistan Travel Team
+last_verified: "2026-09-14"
 seo:
   title: Broad Peak Expedition | Karakoram Vision Pakistan
   description: >-
@@ -89,7 +99,7 @@ layout: layouts/journey.njk
 service_type: expeditions
 service_label: Expeditions
 peak_8000m: true
+duration_days: 45
 ---
 
-
-<h2>Journey overview</h2><p>A full Broad Peak expedition framework with Pakistan permit support, Baltoro approach, base-camp services and high-altitude logistics.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. Karakoram Vision provides logistics according to the signed scope; climbing leadership and individual competence must be clearly agreed.</p><h2>Suggested itinerary</h2><h3>Day 1: Arrival in Islamabad</h3><p>Documentation, briefing and equipment review.</p><h3>Day 2: Travel to Skardu</h3><p>Flight or road contingency.</p><h3>Day 3: Skardu logistics</h3><p>Permit and cargo preparation.</p><h3>Day 4: Drive to Askole</h3><p>Begin the Baltoro approach.</p><h3>Day 5: Trek to base camp</h3><p>Staged approach via Paiju, Urdukas, Goro and Concordia.</p><h3>Day 6: Base camp setup</h3><p>Establish the expedition system.</p><h3>Day 7: Acclimatization phase</h3><p>Rotations and rest as directed by the expedition leader.</p><h3>Day 8: Summit window</h3><p>Weather-dependent high-altitude period with no summit guarantee.</p><h3>Day 9: Base-camp closure</h3><p>Remove equipment and waste according to the plan.</p><h3>Day 10: Trek out</h3><p>Return to Askole.</p><h3>Day 11: Skardu and Islamabad</h3><p>Transport buffers and departure.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
+<h2>Journey overview</h2><p>A full Broad Peak expedition framework with Pakistan permit support, Baltoro approach, base-camp services and high-altitude logistics.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. Karakoram Vision Pakistan provides logistics according to the signed scope; climbing leadership and individual competence must be clearly agreed.</p><h2>Suggested itinerary</h2><h3></h3><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
