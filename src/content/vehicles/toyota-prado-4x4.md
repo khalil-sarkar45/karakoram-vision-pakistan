@@ -3,7 +3,7 @@ title: Toyota Prado 4x4
 slug: toyota-prado-4x4
 permalink: /vehicles/toyota-prado-4x4/
 published: true
-featured: false
+featured: true
 summary: >-
   Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain
   routes.
@@ -24,6 +24,7 @@ seo:
   social_image: /assets/uploads/journeys/skardu-shigar-valley-explorer.svg
 layout: layouts/vehicle.njk
 ---
+
 
 
 <h2>Toyota Prado 4x4</h2><p>Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain routes.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
