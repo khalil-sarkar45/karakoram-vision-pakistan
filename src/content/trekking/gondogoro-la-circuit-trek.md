@@ -22,7 +22,7 @@ price_from: On request
 deposit: Confirmed with proposal
 price_currency: USD
 group_size: 4–20 trekkers
-difficulty: Strenuous
+difficulty: Challenging
 destination: Baltoro, Gondogoro La & Hushe
 categories:
   - Trekking
@@ -90,6 +90,7 @@ service_type: trekking
 service_label: Trekking
 k2_trek: true
 ---
+
 
 
 <h2>Journey overview</h2><p>A strenuous Baltoro circuit that links Concordia with the Hushe Valley through Gondogoro La when conditions and team readiness permit.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. The pass crossing is never guaranteed and depends on snow, weather, fixed-rope condition and guide assessment.</p><h2>Suggested itinerary</h2><h3>Day 1: Arrival and briefing</h3><p>Meet in Islamabad.</p><h3>Day 2: Travel to Skardu</h3><p>Flight or road plan.</p><h3>Day 3: Preparation in Skardu</h3><p>Equipment and permit checks.</p><h3>Day 4: Drive to Askole</h3><p>Road-head transfer.</p><h3>Day 5: Approach to Paiju</h3><p>Progress through lower Baltoro stages.</p><h3>Day 6: Acclimatization</h3><p>Rest at Paiju.</p><h3>Day 7: Baltoro Glacier</h3><p>Trek toward Urdukas and Goro.</p><h3>Day 8: Concordia</h3><p>Reach the central Karakoram junction.</p><h3>Day 9: Exploration day</h3><p>Optional base-camp direction according to fitness.</p><h3>Day 10: Ali Camp</h3><p>Position for the pass.</p><h3>Day 11: Gondogoro La crossing</h3><p>Technical early start only when guides consider conditions suitable.</p><h3>Day 12: Khuspang</h3><p>Recovery below the pass.</p><h3>Day 13: Saicho</h3><p>Descend toward greener terrain.</p><h3>Day 14: Hushe</h3><p>Complete the trek.</p><h3>Day 15: Return to Skardu</h3><p>Drive through Khaplu.</p><h3>Day 16: Contingency days</h3><p>Reserved for weather and operational changes.</p><h3>Day 17: Departure</h3><p>Onward travel.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
