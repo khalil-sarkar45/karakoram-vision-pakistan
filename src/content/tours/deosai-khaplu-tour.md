@@ -7,7 +7,7 @@ featured: true
 best_seller: true
 fixed_departure: true
 departure_type: Custom
-trip_status: On request
+trip_status: Available
 summary: >-
   An eight-day highland and heritage journey linking Skardu, Deosai National Park, Shigar and
   Khaplu.
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: tours
 service_label: Tours
 ---
+
 
 
 <h2>Journey overview</h2><p>An eight-day highland and heritage journey linking Skardu, Deosai National Park, Shigar and Khaplu.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. </p><h2>Suggested itinerary</h2><h3>Day 1: Arrival in Skardu</h3><p>Meet the team and review the road and weather plan.</p><h3>Day 2: Drive to Deosai</h3><p>Enter the high plateau via Satpara and camp or lodge according to the selected package.</p><h3>Day 3: Deosai exploration</h3><p>Visit suitable viewpoints and wildlife observation areas without disturbing habitats.</p><h3>Day 4: Return to Skardu</h3><p>Drive back with scenic stops.</p><h3>Day 5: Shigar heritage</h3><p>Visit Shigar Fort and the traditional settlement.</p><h3>Day 6: Drive to Khaplu</h3><p>Follow the Shyok Valley to Khaplu.</p><h3>Day 7: Khaplu day</h3><p>Visit Khaplu Palace, Chaqchan Mosque and nearby villages.</p><h3>Day 8: Departure</h3><p>Return or continue according to the confirmed transport plan.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
