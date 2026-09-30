@@ -31,8 +31,10 @@ tags:
   - 8000m
   - expedition
   - Karakoram
-departures: []
-departure_details: []
+departures:
+  - 22/06 to 10/08/2027
+departure_details:
+  - dates: 22/06/2027
 highlights:
   - Gasherbrum base-camp coordination
   - Permit and liaison support
@@ -91,6 +93,7 @@ service_label: Expeditions
 peak_8000m: true
 duration_days: 50
 ---
+
 
 
 <h2>Journey overview</h2><p>A Gasherbrum II expedition programme covering permits, Baltoro access, base camp and staged high-altitude support.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. Final service scope must define oxygen, ropes, high-altitude staff, communication and rescue arrangements.</p><h2>Suggested itinerary</h2><h3>Day 1: Islamabad formalities</h3><p>Meet, document review and team briefing.</p><h3>Day 2: Travel to Skardu</h3><p>Flight or road contingency.</p><h3>Day 3: Skardu preparation</h3><p>Cargo, food and operational checks.</p><h3>Day 4: Baltoro approach</h3><p>Trek through established camps toward Concordia.</p><h3>Day 5: Gasherbrum base camp</h3><p>Set up expedition facilities.</p><h3>Day 6: Acclimatization rotations</h3><p>Progress only according to leader assessment.</p><h3>Day 7: Summit period</h3><p>Use suitable weather opportunities without guarantee.</p><h3>Day 8: Clearance and trek out</h3><p>Close camps and return responsibly.</p><h3>Day 9: Transport buffers</h3><p>Skardu and Islamabad contingency.</p><h3>Day 10: Departure</h3><p>Onward travel.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
