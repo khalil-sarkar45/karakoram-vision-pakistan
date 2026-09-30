@@ -5,9 +5,9 @@ permalink: /trekking/k2-base-camp-baltoro-trek/
 published: true
 featured: true
 best_seller: true
-fixed_departure: false
-departure_type: Private
-trip_status: On request
+fixed_departure: true
+departure_type: Custom
+trip_status: Available
 summary: >-
   A demanding Karakoram trek through the Baltoro Glacier to Concordia and the K2 base-camp region,
   planned with local support.
@@ -17,11 +17,11 @@ answer_summary: >-
 cover_image: /assets/uploads/journeys/k2-base-camp-baltoro-trek.svg
 cover_image_alt: K2 Base Camp and Baltoro Glacier Trek mountain landscape in northern Pakistan
 gallery: []
-duration: 20-22 days
+duration: 20 days
 price_from: On request
 deposit: Confirmed with proposal
 price_currency: USD
-group_size: 4–12 trekkers
+group_size: 4–20 trekkers
 difficulty: Challenging
 destination: Baltoro, Concordia  broad peak and K2
 categories:
@@ -94,6 +94,7 @@ service_type: trekking
 service_label: Trekking
 k2_trek: true
 ---
+
 
 
 <h2>Journey overview</h2><p>A demanding Karakoram trek through the Baltoro Glacier to Concordia and the K2 base-camp region, planned with local support.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. This route requires strong fitness, acclimatization and appropriate rescue insurance.</p><h2>Suggested itinerary</h2><h3>Day 1: Arrival in Islamabad</h3><p>Documentation and briefing.</p><h3>Day 2: Travel to Skardu</h3><p>Flight or road contingency according to conditions.</p><h3>Day 3: Skardu preparation</h3><p>Equipment check and operational briefing.</p><h3>Day 4: Drive to Askole</h3><p>4x4 access into the Braldu valley.</p><h3>Day 5: Trek to Jhola</h3><p>Begin the approach with the support team.</p><h3>Day 6: Trek to Paiju</h3><p>Continue along the Baltoro approach.</p><h3>Day 7: Paiju acclimatization</h3><p>Rest and acclimatization day.</p><h3>Day 8: Enter Baltoro Glacier</h3><p>Move onto the glacier route.</p><h3>Day 9: Trek to Urdukas</h3><p>Camp above the glacier.</p><h3>Day 10: Trek to Goro II</h3><p>Progress deeper into the central Karakoram.</p><h3>Day 11: Reach Concordia</h3><p>Arrive at the meeting point of major glaciers.</p><h3>Day 12: K2 base-camp excursion</h3><p>Long day toward Broad Peak and K2 base-camp areas, subject to conditions.</p><h3>Day 13: Concordia recovery</h3><p>Weather and recovery day.</p><h3>Day 14: Return toward Goro</h3><p>Begin descent.</p><h3>Day 15: Urdukas</h3><p>Continue down-glacier.</p><h3>Day 16: Paiju</h3><p>Return to lower camps.</p><h3>Day 17: Jhola</h3><p>Trek toward the road head.</p><h3>Day 18: Askole and Skardu</h3><p>Complete trekking and return by jeep.</p><h3>Day 19: Skardu contingency</h3><p>Weather and flight buffer.</p><h3>Day 20: Departure</h3><p>Onward transfer.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
