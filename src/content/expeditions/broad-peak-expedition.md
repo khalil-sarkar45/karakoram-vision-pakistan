@@ -17,7 +17,7 @@ answer_summary: >-
 cover_image: /assets/uploads/journeys/broad-peak-expedition.svg
 cover_image_alt: Broad Peak Expedition mountain landscape in northern Pakistan
 gallery: []
-duration: 45 Days
+duration: 50 Days
 price_from: On request
 deposit: Confirmed with proposal
 price_currency: USD
@@ -102,8 +102,9 @@ layout: layouts/journey.njk
 service_type: expeditions
 service_label: Expeditions
 peak_8000m: true
-duration_days: 45
+duration_days: 50
 ---
+
 
 
 <h2>Journey overview</h2><p>A full Broad Peak expedition framework with Pakistan permit support, Baltoro approach, base-camp services and high-altitude logistics.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. Karakoram Vision Pakistan provides logistics according to the signed scope; climbing leadership and individual competence must be clearly agreed.</p><h2>Suggested itinerary</h2><h3></h3><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
