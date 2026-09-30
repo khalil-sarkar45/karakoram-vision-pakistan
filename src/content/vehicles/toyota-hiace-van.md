@@ -3,7 +3,7 @@ title: Toyota Hiace Van
 slug: toyota-hiace-van
 permalink: /vehicles/toyota-hiace-van/
 published: true
-featured: false
+featured: true
 summary: Group transport for tours, city transfers and long road journeys with luggage planning.
 cover_image: /assets/uploads/journeys/gilgit-baltistan-grand-circuit.svg
 cover_image_alt: Toyota Hiace Van
@@ -20,6 +20,7 @@ seo:
   social_image: /assets/uploads/journeys/gilgit-baltistan-grand-circuit.svg
 layout: layouts/vehicle.njk
 ---
+
 
 
 <h2>Toyota Hiace Van</h2><p>Group transport for tours, city transfers and long road journeys with luggage planning.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
