@@ -1,7 +1,7 @@
 ---
-title: Shigar, Basho and Khaplu Jeep Adventure
-slug: shigar-basho-khaplu-jeep-adventure
-permalink: /jeep-safaris/shigar-basho-khaplu-jeep-adventure/
+title: Shigar, Basho and Khaplu Adventure Trip
+slug: shigar-basho-khaplu-adventure-trip
+permalink: /jeep-safaris/shigar-basho-khaplu-adventure-trip/
 published: true
 featured: true
 best_seller: true
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: jeep-safaris
 service_label: Jeep Safaris
 ---
+
 
 
 <h2>Journey overview</h2><p>A six-day private jeep journey combining Shigar heritage, Basho landscapes and the Shyok Valley road to Khaplu.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. </p><h2>Suggested itinerary</h2><h3>Day 1: Skardu arrival</h3><p>Meet the driver and review the road plan.</p><h3>Day 2: Shigar Valley</h3><p>Heritage visits and village roads.</p><h3>Day 3: Basho excursion</h3><p>4x4 day trip subject to track conditions.</p><h3>Day 4: Drive to Khaplu</h3><p>Follow the Shyok Valley.</p><h3>Day 5: Khaplu exploration</h3><p>Palace, mosque and nearby villages.</p><h3>Day 6: Return or departure</h3><p>Transfer according to onward plans.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
