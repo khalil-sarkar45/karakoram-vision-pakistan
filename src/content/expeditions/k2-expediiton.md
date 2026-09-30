@@ -45,8 +45,10 @@ tags:
   - Baltistan
   - Shigar
   - Skardu
-departures: []
-departure_details: []
+departures:
+  - 22/06 to 18/08/2027
+departure_details:
+  - dates: 22/06/2027
 highlights:
   - "Small villages, Rivers, Glaciers, Mountains, Concordia, "
   - Baltoro Glacier
@@ -100,6 +102,7 @@ seo:
   robots: K2, Expedition, Climbing, Expedition
 body: ""
 ---
+
 
 
 
