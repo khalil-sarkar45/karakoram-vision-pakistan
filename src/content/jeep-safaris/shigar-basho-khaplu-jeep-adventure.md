@@ -5,7 +5,7 @@ permalink: /jeep-safaris/shigar-basho-khaplu-adventure-trip/
 published: true
 featured: true
 best_seller: true
-fixed_departure: true
+fixed_departure: false
 departure_type: Custom
 trip_status: Available
 summary: >-
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: jeep-safaris
 service_label: Jeep Safaris
 ---
+
 
 
 
