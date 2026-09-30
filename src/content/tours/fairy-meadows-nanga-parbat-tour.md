@@ -7,7 +7,7 @@ featured: true
 best_seller: true
 fixed_departure: true
 departure_type: Custom
-trip_status: On request
+trip_status: Available
 summary: >-
   A six-day road-and-walk journey to Fairy Meadows with clear views toward Nanga Parbat and the
   Raikot face.
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: tours
 service_label: Tours
 ---
+
 
 
 <h2>Journey overview</h2><p>A six-day road-and-walk journey to Fairy Meadows with clear views toward Nanga Parbat and the Raikot face.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. </p><h2>Suggested itinerary</h2><h3>Day 1: Drive to Chilas or Raikot</h3><p>Travel along the Karakoram Highway with planned rest stops.</p><h3>Day 2: Raikot Bridge to Fairy Meadows</h3><p>Local jeep transfer to Tattu followed by the walk to Fairy Meadows.</p><h3>Day 3: Beyal Camp walk</h3><p>A guided day walk toward Beyal Camp, adjusted to guest fitness.</p><h3>Day 4: Fairy Meadows leisure</h3><p>Photography, village interaction and recovery time.</p><h3>Day 5: Return to Chilas</h3><p>Walk and jeep transfer back to the highway.</p><h3>Day 6: Departure</h3><p>Continue toward Gilgit, Islamabad or the next destination.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
