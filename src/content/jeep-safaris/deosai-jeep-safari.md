@@ -21,7 +21,7 @@ duration: 5 Days
 price_from: On request
 deposit: Confirmed with proposal
 price_currency: USD
-group_size: 2–14 travelers
+group_size: 2–50 travelers
 difficulty: Easy
 destination: Skardu & Deosai
 categories:
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: jeep-safaris
 service_label: Jeep Safaris
 ---
+
 
 
 <h2>Journey overview</h2><p>A five-day 4x4 programme through Skardu and the Deosai Plateau, operated only when seasonal roads are officially open.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. Access normally depends on seasonal road opening and weather.</p><h2>Suggested itinerary</h2><h3>Day 1: Skardu arrival</h3><p>Vehicle and route briefing.</p><h3>Day 2: Skardu to Deosai</h3><p>Enter the plateau through the agreed access road.</p><h3>Day 3: Deosai exploration</h3><p>Visit suitable areas with low-impact wildlife observation.</p><h3>Day 4: Return to Skardu</h3><p>Scenic transfer and optional Satpara stop.</p><h3>Day 5: Departure</h3><p>Airport or road transfer.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
