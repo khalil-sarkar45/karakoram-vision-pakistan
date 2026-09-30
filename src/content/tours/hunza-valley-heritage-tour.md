@@ -7,7 +7,7 @@ featured: true
 best_seller: true
 fixed_departure: true
 departure_type: Custom
-trip_status: On request
+trip_status: Available
 summary: >-
   An eight-day cultural journey through Gilgit, Nagar and Hunza with forts, village walks and
   Karakoram Highway viewpoints.
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: tours
 service_label: Tours
 ---
+
 
 
 <h2>Journey overview</h2><p>An eight-day cultural journey through Gilgit, Nagar and Hunza with forts, village walks and Karakoram Highway viewpoints.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. </p><h2>Suggested itinerary</h2><h3>Day 1: Arrival in Gilgit</h3><p>Airport reception or road arrival, hotel check-in and a relaxed orientation.</p><h3>Day 2: Drive to Hunza</h3><p>Travel through Nagar with stops at Rakaposhi View Point and village landscapes.</p><h3>Day 3: Karimabad heritage</h3><p>Visit Baltit Fort, Altit Fort and the historic settlement lanes.</p><h3>Day 4: Upper Hunza</h3><p>Explore Attabad Lake, Passu village and the dramatic cones of the upper valley.</p><h3>Day 5: Khunjerab corridor</h3><p>A full-day scenic drive toward the Pakistan–China border, subject to road access.</p><h3>Day 6: Nagar valley</h3><p>Visit local viewpoints and learn about the valley’s agricultural traditions.</p><h3>Day 7: Return to Gilgit</h3><p>Travel back with flexible stops for photography and local food.</p><h3>Day 8: Departure</h3><p>Transfer for the onward flight or road journey.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
