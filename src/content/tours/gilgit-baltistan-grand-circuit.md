@@ -7,7 +7,7 @@ featured: true
 best_seller: true
 fixed_departure: true
 departure_type: Custom
-trip_status: On request
+trip_status: Available
 summary: >-
   A twelve-day private circuit covering Gilgit, Hunza, Skardu, Shigar and Khaplu with scenic road
   travel.
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: tours
 service_label: Tours
 ---
+
 
 
 <h2>Journey overview</h2><p>A twelve-day private circuit covering Gilgit, Hunza, Skardu, Shigar and Khaplu with scenic road travel.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. </p><h2>Suggested itinerary</h2><h3>Day 1: Arrival in Gilgit</h3><p>Welcome and trip briefing.</p><h3>Day 2: Gilgit to Hunza</h3><p>Drive through Nagar and Rakaposhi viewpoints.</p><h3>Day 3: Hunza heritage</h3><p>Forts and village walks.</p><h3>Day 4: Upper Hunza</h3><p>Attabad, Passu and upper-valley landscapes.</p><h3>Day 5: Return to Gilgit</h3><p>Flexible cultural stops.</p><h3>Day 6: Drive to Skardu</h3><p>Travel through the Indus corridor, subject to road conditions.</p><h3>Day 7: Skardu lakes</h3><p>Kachura lakes and city sights.</p><h3>Day 8: Shigar Valley</h3><p>Heritage and cold-desert landscapes.</p><h3>Day 9: Khaplu</h3><p>Drive through the Shyok Valley.</p><h3>Day 10: Khaplu exploration</h3><p>Palace, mosque and villages.</p><h3>Day 11: Return to Skardu</h3><p>Scenic transfer and final evening.</p><h3>Day 12: Departure</h3><p>Airport transfer or road continuation.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
