@@ -21,8 +21,8 @@ duration: 9 Days
 price_from: On request
 deposit: Confirmed with proposal
 price_currency: USD
-group_size: 2–12 travelers
-difficulty: Moderate
+group_size: 2–20 travelers
+difficulty: Easy
 destination: Shigar, Thalle & Khaplu
 categories:
   - Trekking
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: trekking
 service_label: Trekking
 ---
+
 
 
 <h2>Journey overview</h2><p>A nine-day cross-valley trek between Shigar and Khaplu through alpine pastures and the Thalle La route.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. </p><h2>Suggested itinerary</h2><h3>Day 1: Arrival in Skardu</h3><p>Briefing and preparation.</p><h3>Day 2: Drive to Shigar and trailhead</h3><p>Begin the valley approach.</p><h3>Day 3: Trek through Thalle Valley</h3><p>Move through villages and pasture.</p><h3>Day 4: Upper camp</h3><p>Gain altitude gradually.</p><h3>Day 5: Thalle La crossing</h3><p>Cross the pass when conditions are suitable.</p><h3>Day 6: Descent camp</h3><p>Enter the Khaplu side.</p><h3>Day 7: Trek to road head</h3><p>Complete the walking route.</p><h3>Day 8: Khaplu and Skardu</h3><p>Road transfer with heritage stop.</p><h3>Day 9: Departure</h3><p>Airport transfer.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
