@@ -4,7 +4,9 @@ slug: toyota-prado-4x4
 permalink: /vehicles/toyota-prado-4x4/
 published: true
 featured: false
-summary: Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain routes.
+summary: >-
+  Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain
+  routes.
 cover_image: /assets/uploads/journeys/skardu-shigar-valley-explorer.svg
 cover_image_alt: Toyota Prado 4x4
 vehicle_type: Toyota Prado 4x4
@@ -13,12 +15,15 @@ price_from: Route-based quote
 destination: Pakistan
 seo:
   title: Toyota Prado 4x4 | Karakoram Vision Pakistan
-  description: Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain routes.
+  description: >-
+    Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain
+    routes.
   keywords: Pakistan transport, mountain vehicle, group transfer
   robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
-  canonical: ''
+  canonical: ""
   social_image: /assets/uploads/journeys/skardu-shigar-valley-explorer.svg
 layout: layouts/vehicle.njk
 ---
+
 
 <h2>Toyota Prado 4x4</h2><p>Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain routes.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
