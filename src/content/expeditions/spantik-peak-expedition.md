@@ -4,9 +4,9 @@ slug: spantik-peak-expedition
 permalink: /expeditions/spantik-peak-expedition/
 published: true
 featured: true
-best_seller: false
-fixed_departure: false
-departure_type: Private
+best_seller: true
+fixed_departure: true
+departure_type: Custom
 trip_status: On request
 summary: >-
   A supported expedition plan for Spantik Peak with permit coordination, approach trekking,
@@ -89,6 +89,7 @@ layout: layouts/journey.njk
 service_type: expeditions
 service_label: Expeditions
 ---
+
 
 
 
