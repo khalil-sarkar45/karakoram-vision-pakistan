@@ -8,7 +8,7 @@ summary: Group transport for tours, city transfers and long road journeys with l
 cover_image: /assets/uploads/journeys/gilgit-baltistan-grand-circuit.svg
 cover_image_alt: Toyota Hiace Van
 vehicle_type: Toyota Hiace Van
-capacity: 6–12 passengers
+capacity: 6–10 passengers
 price_from: Route-based quote
 destination: Pakistan
 seo:
@@ -16,9 +16,10 @@ seo:
   description: Group transport for tours, city transfers and long road journeys with luggage planning.
   keywords: Pakistan transport, mountain vehicle, group transfer
   robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
-  canonical: ''
+  canonical: ""
   social_image: /assets/uploads/journeys/gilgit-baltistan-grand-circuit.svg
 layout: layouts/vehicle.njk
 ---
+
 
 <h2>Toyota Hiace Van</h2><p>Group transport for tours, city transfers and long road journeys with luggage planning.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
