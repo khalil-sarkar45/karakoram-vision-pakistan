@@ -31,8 +31,10 @@ tags:
   - 7000m expedition
   - mountaineering
   - Karakoram
-departures: []
-departure_details: []
+departures:
+  - 01/08 to 05/09/2027
+departure_details:
+  - dates: 01/08/2027
 highlights:
   - Permit and liaison coordination
   - Approach and base-camp logistics
@@ -89,6 +91,7 @@ layout: layouts/journey.njk
 service_type: expeditions
 service_label: Expeditions
 ---
+
 
 
 
