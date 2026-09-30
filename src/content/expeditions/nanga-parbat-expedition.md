@@ -37,8 +37,10 @@ tags:
   - DiamirFace
   - HinduKush
   - Chilas
-departures: []
-departure_details: []
+departures:
+  - 25/05 to 05/07/2027
+departure_details:
+  - dates: 25/05/2027
 highlights:
   - Babusar Top
   - Chilas Village
@@ -66,4 +68,5 @@ seo:
   keywords: NangaParbat, Killer Mountain, Climbing, Adventure, Trekking in Pakistan
 body: ""
 ---
+
 
