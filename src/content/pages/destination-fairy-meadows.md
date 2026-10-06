@@ -28,5 +28,4 @@ seo:
 layout: layouts/page.njk
 ---
 
-
-<h2>Access</h2><p>The route normally combines a local jeep road from Raikot Bridge with a hike from Tattu.</p><h2>Preparation</h2><p>Travelers should assess fitness, weather and the limitations of the access road before confirming.</p>
+<h2><strong>Access</strong></h2><p>The route normally combines a local jeep road from Raikot Bridge with a hike from Tattu.</p><h2><strong>Preparation</strong></h2><p>Travelers should assess fitness, weather and the limitations of the access road before confirming.</p>
