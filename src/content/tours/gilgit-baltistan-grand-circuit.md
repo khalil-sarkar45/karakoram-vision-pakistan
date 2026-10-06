@@ -5,7 +5,7 @@ permalink: /tours/gilgit-baltistan-grand-circuit/
 published: true
 featured: true
 best_seller: true
-fixed_departure: true
+fixed_departure: false
 departure_type: Custom
 trip_status: Available
 summary: >-
@@ -17,7 +17,7 @@ answer_summary: >-
 cover_image: /assets/uploads/journeys/gilgit-baltistan-grand-circuit.svg
 cover_image_alt: Gilgit-Baltistan Grand Circuit mountain landscape in northern Pakistan
 gallery: []
-duration: 12 Days
+duration: 14 Days
 price_from: On request
 deposit: Confirmed with proposal
 price_currency: USD
@@ -90,6 +90,4 @@ service_type: tours
 service_label: Tours
 ---
 
-
-
-<h2>Journey overview</h2><p>A twelve-day private circuit covering Gilgit, Hunza, Skardu, Shigar and Khaplu with scenic road travel.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions. </p><h2>Suggested itinerary</h2><h3>Day 1: Arrival in Gilgit</h3><p>Welcome and trip briefing.</p><h3>Day 2: Gilgit to Hunza</h3><p>Drive through Nagar and Rakaposhi viewpoints.</p><h3>Day 3: Hunza heritage</h3><p>Forts and village walks.</p><h3>Day 4: Upper Hunza</h3><p>Attabad, Passu and upper-valley landscapes.</p><h3>Day 5: Return to Gilgit</h3><p>Flexible cultural stops.</p><h3>Day 6: Drive to Skardu</h3><p>Travel through the Indus corridor, subject to road conditions.</p><h3>Day 7: Skardu lakes</h3><p>Kachura lakes and city sights.</p><h3>Day 8: Shigar Valley</h3><p>Heritage and cold-desert landscapes.</p><h3>Day 9: Khaplu</h3><p>Drive through the Shyok Valley.</p><h3>Day 10: Khaplu exploration</h3><p>Palace, mosque and villages.</p><h3>Day 11: Return to Skardu</h3><p>Scenic transfer and final evening.</p><h3>Day 12: Departure</h3><p>Airport transfer or road continuation.</p><h2>Planning notes</h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2>Responsible travel</h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
+<h2><strong>Journey overview</strong></h2><p>A twelve-day private circuit covering Gilgit, Hunza, Skardu, Shigar and Khaplu with scenic road travel.</p><p>Karakoram Vision Pakistan plans this programme around confirmed road access, accommodation, weather and local operating conditions.</p><p></p><h2><strong>Program</strong></h2><h3><strong>Day 1: Arrival in Islamabad</strong></h3><p>Transfer to hotel and in the afternoon will do some sightseeing in Islamabad, visit like, Fsilsal Mosque, Pakistan Monument and Dam e Koh  </p><h3><strong>Day 2: Drive to Gilgit</strong></h3><p>10 hours drive from Islamabad via KKH</p><h3><strong>Day 3: Gilgit to Hunza</strong></h3><p>Drive through Nagar and Rakaposhi viewpoints.</p><h3><strong>Day 4: Hunza heritage</strong></h3><p>Forts and village walks.</p><h3><strong>Day 5: Upper Hunza</strong></h3><p>Attabad, Passu and upper-valley landscapes.</p><h3><strong>Day 6: Return to Gilgit</strong></h3><p>Flexible cultural stops.</p><h3><strong>Day 7: Drive to Skardu</strong></h3><p>Travel through the Indus corridor, subject to road conditions.</p><h3><strong>Day 8: Skardu lakes</strong></h3><p>Kachura lakes and city sights.</p><h3><strong>Day 9: Shigar Valley</strong></h3><p>Heritage and cold-desert landscapes.</p><h3><strong>Day 10: Khaplu</strong></h3><p>Drive through the Shyok Valley.</p><h3><strong>Day 11: Khaplu exploration</strong></h3><p>Palace, mosque and villages.</p><h3><strong>Day 12: Return to Skardu</strong></h3><p>Scenic transfer and final evening.</p><h3><strong>Day 13: Fly to Islamabad</strong></h3><p>50 minutes fly time</p><p><strong>Day 14: Transfer to the airport for your own destinations</strong></p><p></p><h2><strong>Planning notes</strong></h2><p>This is a starter itinerary rather than a binding quotation. Final services, permits, safety arrangements, hotel category and payment schedule are confirmed in writing after the travel dates and group profile are received.</p><h2><strong>Responsible travel</strong></h2><p>Guests are expected to respect local communities, cultural sites, protected areas and mountain waste rules. The operating plan prioritizes realistic travel times and local services.</p>
