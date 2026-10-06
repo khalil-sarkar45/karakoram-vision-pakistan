@@ -42,5 +42,4 @@ seo:
 layout: layouts/post.njk
 ---
 
-
-<h2>Respect local communities</h2><p>Ask before photographing people, follow dress expectations around villages and religious places, and use local services fairly.</p><h2>Reduce waste</h2><p>Carry refillable bottles where safe systems exist, avoid unnecessary packaging and follow the guide’s waste-separation instructions.</p><h2>Protect fragile places</h2><p>Wildlife observation should be quiet and distant. Vehicles and camps must stay within lawful access areas and established operating guidance.</p>
+<h2><strong>Respect local communities</strong></h2><p>Ask before photographing people, follow dress expectations around villages and religious places, and use local services fairly.</p><h2><strong>Reduce waste</strong></h2><p>Carry refillable bottles where safe systems exist, avoid unnecessary packaging and follow the guide’s waste-separation instructions.</p><h2><strong>Protect fragile places</strong></h2><p>Wildlife observation should be quiet and distant. Vehicles and camps must stay within lawful access areas and established operating guidance.</p>
