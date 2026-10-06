@@ -25,6 +25,4 @@ seo:
 layout: layouts/vehicle.njk
 ---
 
-
-
-<h2>Toyota Prado 4x4</h2><p>Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain routes.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
+<h2><strong>Toyota Prado 4x4</strong></h2><p>Comfortable 4x4 transport for private road journeys, airport transfers and selected mountain routes.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
