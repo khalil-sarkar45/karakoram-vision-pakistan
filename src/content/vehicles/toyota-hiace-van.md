@@ -21,6 +21,4 @@ seo:
 layout: layouts/vehicle.njk
 ---
 
-
-
-<h2>Toyota Hiace Van</h2><p>Group transport for tours, city transfers and long road journeys with luggage planning.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
+<h2><strong>Toyota Hiace Van</strong></h2><p>Group transport for tours, city transfers and long road journeys with luggage planning.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
