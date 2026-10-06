@@ -21,5 +21,4 @@ seo:
 layout: layouts/vehicle.njk
 ---
 
-
-<h2>Coaster Group Transport</h2><p>On-request group transport for larger tour parties, subject to route suitability.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
+<h2><strong>Coaster Group Transport</strong></h2><p>On-request group transport for larger tour parties, subject to route suitability.</p><p>Availability, driver duty hours, luggage space, fuel, road permissions and overnight charges are confirmed in the written transport quotation.</p>
