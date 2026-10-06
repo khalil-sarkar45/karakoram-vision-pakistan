@@ -42,5 +42,4 @@ seo:
 layout: layouts/post.njk
 ---
 
-
-<h2>Build endurance gradually</h2><p>Long walking days on uneven glacier terrain require more than short gym sessions. A progressive programme should combine steady aerobic work, loaded hill walking and recovery.</p><h2>Use tested equipment</h2><p>Boots, layering, sleeping equipment and waterproof protection should be tested before travel. The final list must match the operator’s camp system and expected temperatures.</p><h2>Insurance and contingency</h2><p>Travelers should obtain insurance appropriate to the route altitude and remote evacuation realities. Weather and transport delays are normal planning factors in the Karakoram.</p>
+<h2><strong>Build endurance gradually</strong></h2><p>Long walking days on uneven glacier terrain require more than short gym sessions. A progressive programme should combine steady aerobic work, loaded hill walking and recovery.</p><h2><strong>Use tested equipment</strong></h2><p>Boots, layering, sleeping equipment and waterproof protection should be tested before travel. The final list must match the operator’s camp system and expected temperatures.</p><h2><strong>Insurance and contingency</strong></h2><p>Travelers should obtain insurance appropriate to the route altitude and remote evacuation realities. Weather and transport delays are normal planning factors in the Karakoram.</p>
