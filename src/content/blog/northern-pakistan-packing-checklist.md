@@ -42,6 +42,4 @@ seo:
 layout: layouts/post.njk
 ---
 
-
-
-<h2>Documents and essentials</h2><p>Carry passport or identification, insurance details, booking confirmations, emergency contacts and any route-specific permits advised by the operator.</p><h2>Clothing</h2><p>Use layers rather than relying on one heavy item. Even summer days can be followed by cold evenings at altitude.</p><h2>Health and electronics</h2><p>Bring personal medication, sun protection, a small first-aid kit, power banks and suitable adapters. Specialized trekking or expedition equipment requires a separate route-specific list.</p>
+<h2><strong>Documents and essentials</strong></h2><p>Carry passport or identification, insurance details, booking confirmations, emergency contacts and any route-specific permits advised by the operator.</p><h2><strong>Clothing</strong></h2><p>Use layers rather than relying on one heavy item. Even summer days can be followed by cold evenings at altitude.</p><h2><strong>Health and electronics</strong></h2><p>Bring personal medication, sun protection, a small first-aid kit, power banks and suitable adapters. Specialized trekking or expedition equipment requires a separate route-specific list.</p>
